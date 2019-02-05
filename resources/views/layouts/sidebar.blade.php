@@ -42,6 +42,33 @@
                     <i class="nav-icon icon-chart"></i> Mediciones
                 </a>
                 </li>
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="nav-icon icon-game-controller"></i> Método</a>
+                    <ul class="nav-dropdown-items">
+                        @foreach(Auth::user()->college->courses as $course)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('timeline',$course->id) }}">
+                                <i class="nav-icon icon-graduation"></i> {{$course->level." ".$course->letter}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('download') }}">
+                        <i class="nav-icon icon-notebook"></i> Descargas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('tutorials') }}">
+                        <i class="nav-icon icon-social-youtube"></i> Videotutoriales
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('createsug') }}">
+                        <i class="nav-icon icon-envelope-letter"></i> Enviar Sugerencia
+                    </a>
+                </li>
             @endif
         </ul>
     </nav>

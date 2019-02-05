@@ -135,8 +135,7 @@ class UserController extends Controller
         ]);
 
         $user = new User([
-            'name' => $request->get('name'),
-            'lastname' => $request->get('lastname'),
+            'name' => $request->get('name')." ".$request->get('lastname'),
             'college_id' => $request->get('college_id'),
             'course_id' => $request->get('course_id'),
             'user_type' => 3,

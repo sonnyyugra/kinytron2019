@@ -44,7 +44,7 @@ class SuggestionController extends Controller
             'user_id' => $request->get('user_id'),
         ]);
         $suggestion->save();
-        Alert::success('Muchas gracias por tu ayuda!', 'Enviado!');
+        //Alert::success('Muchas gracias por tu ayuda!', 'Enviado!');
         Session::flash('message', 'agregar');
         return redirect('/createsug');
     }
@@ -52,7 +52,7 @@ class SuggestionController extends Controller
     {
         $suggestion->delete();
         Session::flash('message','eliminar');
-        Alert::error('GG!', 'Eliminado!');
+        //Alert::error('GG!', 'Eliminado!');
 
         return redirect('/indexsug');
     }

@@ -4,6 +4,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/timeline.css')}}">
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <div id="app">
@@ -11,16 +12,25 @@
     <div class="app-body">
         @yield('sidebar')
         <main class="main">
-            <div class="container-fluid">
-                <div class="animated fadeIn">
-                    @yield('content')
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+            </ol>
+            <div class="ui-view">
+                <div>
+                    <div class="container-fluid">
+                        <div class="animated fadeIn">
+                            @yield('content')
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
 
+            </div>
+
+        </main>
     </div>
 
 </div>
+
 <script src="{{ asset('js/app.js') }}" ></script>
 <script>
     window.Laravel = <?php echo json_encode([

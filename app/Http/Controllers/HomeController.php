@@ -26,19 +26,20 @@ class HomeController extends Controller
     {
         if(Auth::user()->user_type == 5){
             $quantityEvaluations = 0;
-            $quantityTests = 0;
+            $quantityAnswers = 0;
             $college = Auth::user()->college;
             $courses = $college->courses;
             $users = $college->users->where('user_type',3);
             $quantityUsers = $college->users->where('user_type',3)->count();
             $quantityCourses = $college->courses->count();
+            $quantityMeasurements = $college->measurements->count();
             foreach($college->courses as $course){
                 $quantityEvaluations = $quantityEvaluations + $course->evaluations->count();
             }
             foreach($users as $user){
-                $quantityTests = $quantityTests + $user->tests->count();
+                $quantityAnswers = $quantityAnswers + $user->answers->count();
             }
-            return view('home',compact('quantityUsers','quantityCourses','quantityEvaluations','quantityTests','courses'));
+            return view('home',compact('quantityUsers','quantityCourses','quantityEvaluations','quantityAnswers','courses','quantityMeasurements'));
 
         }
         if(Auth::user()->user_type == 10){

@@ -25,6 +25,15 @@
                             <div class="alert alert-success" role="alert">Elemento agregado correctamente</div>
                         @endif
                     @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card-body">
                         <table class="table table-hover table-striped" data-toggle="dataTable" data-form="deleteForm">
                             <thead>

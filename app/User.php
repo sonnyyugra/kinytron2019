@@ -34,10 +34,7 @@ class User extends Authenticatable
     {
         return $this->belongsTo(College::class);
     }
-    public function tests()
-    {
-        return $this->hasMany(Test::class);
-    }
+
     public function course(){
         return $this->belongsTo(Course::class);
     }
