@@ -38,6 +38,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('mod2','CourseController@mod2')->name('mod2');
     Route::post('mod3','CourseController@mod3')->name('mod3');
     Route::post('mod4','CourseController@mod4')->name('mod4');
+    Route::post('mod5','CourseController@mod5')->name('mod5');
+    Route::post('mod6','CourseController@mod6')->name('mod6');
+    Route::post('mod7','CourseController@mod7')->name('mod7');
+    Route::post('mod8','CourseController@mod8')->name('mod8');
     Route::resource('user','UserController');
     Route::get('adduseradm','UserController@addadm')->name('adduseradm');
     Route::post('storeadm','UserController@storeadm')->name('storeadm');

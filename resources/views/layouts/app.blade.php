@@ -92,5 +92,7 @@
         } );
     } );
 </script>
+<script src="{{ asset('/js/descriptions.js') }}" type="text/javascript"></script>
+
 </body>
 </html>

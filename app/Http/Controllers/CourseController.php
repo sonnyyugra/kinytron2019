@@ -157,6 +157,38 @@ class CourseController extends Controller
         Session::flash('message', 'editar');
         return view('course.plan',compact('course','users'));
     }
+    public function mod5(Request $request){
+        $users = Course::find($request->course_id)->users->where('user_type', '3');
+        $course = Course::find($request->course_id);
+        $course->mod5 = $request->mod5;
+        $course->save();
+        Session::flash('message', 'editar');
+        return view('course.plan',compact('course','users'));
+    }
+    public function mod6(Request $request){
+        $users = Course::find($request->course_id)->users->where('user_type', '3');
+        $course = Course::find($request->course_id);
+        $course->mod6 = $request->mod6;
+        $course->save();
+        Session::flash('message', 'editar');
+        return view('course.plan',compact('course','users'));
+    }
+    public function mod7(Request $request){
+        $users = Course::find($request->course_id)->users->where('user_type', '3');
+        $course = Course::find($request->course_id);
+        $course->mod7 = $request->mod7;
+        $course->save();
+        Session::flash('message', 'editar');
+        return view('course.plan',compact('course','users'));
+    }
+    public function mod8(Request $request){
+        $users = Course::find($request->course_id)->users->where('user_type', '3');
+        $course = Course::find($request->course_id);
+        $course->mod8 = $request->mod8;
+        $course->save();
+        Session::flash('message', 'editar');
+        return view('course.plan',compact('course','users'));
+    }
     public function changeMod(Request $request){
         $users = Course::find($request->course_id)->users->where('user_type',3);
         $value = $request->changeMod;
