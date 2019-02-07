@@ -44,12 +44,13 @@ class EvaluationController extends Controller
     {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
-        if($course->evaluations->where('workshop',$request->workshop)->isEmpty()){
-            if($request->evaluations =! null){
+        if($course->evaluations->where('workshop',$request->workshop)->where('criterio',$request->criterio)->isEmpty()){
+            if($request->evaluations =! null) {
                 for ($i=0;$i<count($request->users);$i++){
                     $evaluation = new Evaluation([
                         'score' => $request->input('evaluations.'.$i.''),
                         'workshop' => $request->workshop,
+                        'criterio' => $request->criterio,
                         'user_id' => $request->input('users.'.$i.''),
                         'course_id' => $request->course_id
                     ]);
@@ -58,107 +59,394 @@ class EvaluationController extends Controller
             }
         }
 
+
+
         $workshop = $request->workshop;
+        $criterio = $request->criterio;
         switch ($workshop) {
             case 1:
-                $course->e1 = 1;
-                $course->save();
+                switch ($criterio){
+                    case 1:
+                        $course->e1c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e1c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e1c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e1c4 = 1;
+                        $course->save();
+                        break;
+                }
             break;
             case 2:
-                $course->e2 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e2c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e2c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e2c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e2c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 3:
-                $course->e3 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e3c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e3c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e3c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e3c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 4:
-                $course->e4 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e4c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e4c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e4c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e4c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 5:
-                $course->e5 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e5c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e5c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e5c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e5c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 6:
-                $course->e6 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e6c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e6c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e6c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e6c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 7:
-                $course->e7 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e7c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e7c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e7c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e7c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 8:
-                $course->e8 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e8c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e8c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e8c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e8c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 9:
-                $course->e9 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e9c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e9c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e9c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e9c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 10:
-                $course->e10 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e10c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e10c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e10c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e10c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 11:
-                $course->e11 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e11c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e11c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e11c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e11c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 12:
-                $course->e12 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e12c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e12c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e12c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e12c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 13:
-                $course->e13 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e13c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e13c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e13c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e13c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 14:
-                $course->e14 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e14c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e14c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e14c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e14c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 15:
-                $course->e15 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e15c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e15c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e15c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e15c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 16:
-                $course->e16 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e16c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e16c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e16c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e16c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 17:
-                $course->e17 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e17c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e17c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e17c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e17c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 18:
-                $course->e18 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e18c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e18c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e18c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e18c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 19:
-                $course->e19 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e19c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e19c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e19c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e19c4 = 1;
+                        $course->save();
+                        break;
+                }
             case 20:
-                $course->e20 = 1;
-                $course->save();
-                break;
-            case 21:
-                $course->e21 = 1;
-                $course->save();
-                break;
-            case 22:
-                $course->e22 = 1;
-                $course->save();
-                break;
-            case 23:
-                $course->e23 = 1;
-                $course->save();
-                break;
-            case 24:
-                $course->e24 = 1;
-                $course->save();
-                break;
+                switch ($criterio){
+                    case 1:
+                        $course->e20c1 = 1;
+                        $course->save();
+                        break;
+                    case 2:
+                        $course->e20c2 = 1;
+                        $course->save();
+                        break;
+                    case 3:
+                        $course->e20c3 = 1;
+                        $course->save();
+                        break;
+                    case 4:
+                        $course->e20c4 = 1;
+                        $course->save();
+                        break;
+                }
         }
         Session::flash('message', 'agregar');
-        $course = Course::find($request->course_id);
         return view('course.plan',compact('course','users'));
     }
 

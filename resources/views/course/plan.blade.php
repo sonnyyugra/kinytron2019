@@ -116,17 +116,17 @@
                                                     <button class="btn bg-orange disabled" type="button">Atención</button>
                                                 @endif
                                                 @if($course->e1c2 == 0)
-                                                    <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="1" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                 @else
                                                     <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                 @endif
                                                 @if($course->e1c3 == 0)
-                                                    <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="1" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
                                                 @else
                                                     <button class="btn bg-teal disabled" type="button">Expresión</button>
                                                 @endif
                                                 @if($course->e1c4 == 0)
-                                                    <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="1" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
                                                 @else
                                                     <button class="btn bg-red disabled" type="button">Aplicación</button>
                                                 @endif
@@ -1366,13 +1366,13 @@
                                 <td>{{$user->name." ".$user->lastname}}</td>
                                 <td>
                                     <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-primary">
+                                        <label class="btn btn-secondary">
                                             <input type="radio" name="evaluations[{{$loop->index}}]" value="1"> Deficiente
                                         </label>
-                                        <label class="btn btn-primary active">
+                                        <label class="btn btn-secondary active">
                                             <input type="radio" name="evaluations[{{$loop->index}}]" value="2" checked> Regular
                                         </label>
-                                        <label class="btn btn-primary">
+                                        <label class="btn btn-secondary">
                                             <input type="radio" name="evaluations[{{$loop->index}}]" value="3"> Muy Bueno
                                         </label>
                                     </div>

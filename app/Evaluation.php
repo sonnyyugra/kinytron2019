@@ -13,7 +13,7 @@ class Evaluation extends Model
     public $table = "evaluations";
 
     protected $fillable = [
-        'course_id','user_id','workshop','score'
+        'course_id','user_id','workshop','score','criterio'
     ];
 
     public function user(){
