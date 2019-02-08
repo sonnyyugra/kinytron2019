@@ -103,6 +103,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 3:
                 switch ($criterio){
                     case 1:
@@ -122,6 +124,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 4:
                 switch ($criterio){
                     case 1:
@@ -141,6 +145,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 5:
                 switch ($criterio){
                     case 1:
@@ -160,6 +166,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 6:
                 switch ($criterio){
                     case 1:
@@ -179,6 +187,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 7:
                 switch ($criterio){
                     case 1:
@@ -198,6 +208,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 8:
                 switch ($criterio){
                     case 1:
@@ -217,6 +229,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 9:
                 switch ($criterio){
                     case 1:
@@ -236,6 +250,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 10:
                 switch ($criterio){
                     case 1:
@@ -255,6 +271,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 11:
                 switch ($criterio){
                     case 1:
@@ -274,6 +292,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 12:
                 switch ($criterio){
                     case 1:
@@ -293,6 +313,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 13:
                 switch ($criterio){
                     case 1:
@@ -312,6 +334,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 14:
                 switch ($criterio){
                     case 1:
@@ -331,6 +355,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 15:
                 switch ($criterio){
                     case 1:
@@ -350,6 +376,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 16:
                 switch ($criterio){
                     case 1:
@@ -369,6 +397,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 17:
                 switch ($criterio){
                     case 1:
@@ -388,6 +418,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 18:
                 switch ($criterio){
                     case 1:
@@ -407,6 +439,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 19:
                 switch ($criterio){
                     case 1:
@@ -426,6 +460,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
             case 20:
                 switch ($criterio){
                     case 1:
@@ -445,6 +481,8 @@ class EvaluationController extends Controller
                         $course->save();
                         break;
                 }
+            break;
+
         }
         Session::flash('message', 'agregar');
         return view('course.plan',compact('course','users'));
@@ -582,7 +620,7 @@ class EvaluationController extends Controller
 
         }
         $chart_c1->dataset('Sample', 'pie', [$Deficiente_c1,$Regular_c1,$Muy_Bueno_c1]);
-        $chart_c2->dataset('Sample', 'pie', [3,5,7]);
+        $chart_c2->dataset('Sample', 'pie', [$Deficiente_c2,$Regular_c2,$Muy_Bueno_c2]);
         $chart_c3->dataset('Sample', 'pie', [$Deficiente_c3,$Regular_c3,$Muy_Bueno_c3]);
         $chart_c4->dataset('Sample', 'pie', [$Deficiente_c4,$Regular_c4,$Muy_Bueno_c4]);
 

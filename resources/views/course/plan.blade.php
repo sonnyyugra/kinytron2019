@@ -117,7 +117,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e1c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="1" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="1" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -227,7 +227,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e2c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="2" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="2" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -314,7 +314,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e3c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="3" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="3" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -420,7 +420,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e4c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="4" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="4" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -493,7 +493,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e5c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="5" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="5" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -615,7 +615,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e6c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="6" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="6" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -705,7 +705,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e7c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="7" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="7" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -814,7 +814,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e8c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="8" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="8" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -919,7 +919,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e9c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="9" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="9" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1007,7 +1007,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e10c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="10" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="10" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1097,7 +1097,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e11c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="11" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="11" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1206,7 +1206,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e12c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="12" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="12" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1319,7 +1319,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e13c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="13" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="13" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1407,7 +1407,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e14c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="14" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="14" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1497,7 +1497,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e15c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="15" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="15" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1608,7 +1608,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e16c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="16" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="16" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1716,7 +1716,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e17c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="17" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="17" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1804,7 +1804,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e18c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="18" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="18" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -1916,7 +1916,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e19c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="19" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="19" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
@@ -2022,7 +2022,7 @@
                                                         <button class="btn bg-orange disabled" type="button">Atención</button>
                                                     @endif
                                                     @if($course->e20c2 == 0)
-                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="20" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                        <button type="button" class="btn bg-cyan" data-toggle="modal" data-whatever="20" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
                                                     @else
                                                         <button class="btn bg-cyan disabled" type="button">Participación</button>
                                                     @endif
