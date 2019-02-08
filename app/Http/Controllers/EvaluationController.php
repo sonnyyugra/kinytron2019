@@ -508,26 +508,84 @@ class EvaluationController extends Controller
         $workshop_number = $request->workshop_number;
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
+        $chart_c1 =  new EvaluationChart();
+        $chart_c2 =  new EvaluationChart();
         $chart =  new EvaluationChart();
-        $Deficiente = 0;
-        $Regular = 0;
-        $Muy_Bueno = 0;
+        $chart_c3 =  new EvaluationChart();
+        $chart_c4 =  new EvaluationChart();
+
+        $Deficiente_c1 = 0;
+        $Regular_c1 = 0;
+        $Muy_Bueno_c1 = 0;
+
+        $Deficiente_c2 = 0;
+        $Regular_c2 = 0;
+        $Muy_Bueno_c2 = 0;
+
+        $Deficiente_c3 = 0;
+        $Regular_c3 = 0;
+        $Muy_Bueno_c3 = 0;
+
+        $Deficiente_c4 = 0;
+        $Regular_c4 = 0;
+        $Muy_Bueno_c4 = 0;
 
         foreach ($users as $user){
-            foreach ($user->evaluations->where('workshop',$workshop_number) as $evaluation){
+            //c1
+            foreach ($user->evaluations->where('workshop',$workshop_number)->where('criterio',1) as $evaluation){
                 if($evaluation->score == 1){
-                    $Deficiente++;
+                    $Deficiente_c1++;
                 }
                 if($evaluation->score == 2){
-                    $Regular++;
+                    $Regular_c1++;
                 }
                 if($evaluation->score == 3){
-                    $Muy_Bueno++;
+                    $Muy_Bueno_c1++;
                 }
             }
+            //c2
+            foreach ($user->evaluations->where('workshop',$workshop_number)->where('criterio',2) as $evaluation){
+                if($evaluation->score == 1){
+                    $Deficiente_c2++;
+                }
+                if($evaluation->score == 2){
+                    $Regular_c2++;
+                }
+                if($evaluation->score == 3){
+                    $Muy_Bueno_c2++;
+                }
+            }
+            //c3
+            foreach ($user->evaluations->where('workshop',$workshop_number)->where('criterio',3) as $evaluation){
+                if($evaluation->score == 1){
+                    $Deficiente_c3++;
+                }
+                if($evaluation->score == 2){
+                    $Regular_c3++;
+                }
+                if($evaluation->score == 3){
+                    $Muy_Bueno_c3++;
+                }
+            }
+            //c4
+            foreach ($user->evaluations->where('workshop',$workshop_number)->where('criterio',4) as $evaluation){
+                if($evaluation->score == 1){
+                    $Deficiente_c4++;
+                }
+                if($evaluation->score == 2){
+                    $Regular_c4++;
+                }
+                if($evaluation->score == 3){
+                    $Muy_Bueno_c4++;
+                }
+            }
+
         }
-        $chart->displayAxes(false)->dataset('Sample', 'pie', [$Deficiente,$Regular,$Muy_Bueno])
-            ->BackgroundColor(['red','yellow','green']);
-        return view('evaluation.showResult',compact('users','chart','course','workshop_number'));
+        $chart_c1->dataset('Sample', 'pie', [$Deficiente_c1,$Regular_c1,$Muy_Bueno_c1]);
+        $chart_c2->dataset('Sample', 'pie', [3,5,7]);
+        $chart_c3->dataset('Sample', 'pie', [$Deficiente_c3,$Regular_c3,$Muy_Bueno_c3]);
+        $chart_c4->dataset('Sample', 'pie', [$Deficiente_c4,$Regular_c4,$Muy_Bueno_c4]);
+
+        return view('evaluation.showResult',compact('users','chart_c1','chart_c2','chart_c3','chart_c4','course','workshop_number'));
     }
 }

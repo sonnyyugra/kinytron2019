@@ -93,6 +93,7 @@
     } );
 </script>
 <script src="{{ asset('/js/descriptions.js') }}" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
 
 </body>
 </html>

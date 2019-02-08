@@ -153,7 +153,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Introducción 2</h4>
-                                        @if($course->e2 == 0)
+                                        @if($course->e2c1 == 0 || $course->e2c2 == 0 || $course->e2c3 == 0|| $course->e2c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -217,8 +217,43 @@
                                                 claro cada uno sus
                                                 propósito en la vida.
                                             @endif
-
                                         </p>
+                                        @if($course->e2c1 == 0 || $course->e2c2 == 0 || $course->e2c3 == 0|| $course->e2c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e2c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="2" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e2c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="2" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e2c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="2" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e2c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="2" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="2">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -229,7 +264,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 1</h4>
-                                        @if($course->e3 == 0)
+                                        @if($course->e3c1 == 0 || $course->e3c2 == 0 || $course->e3c3 == 0|| $course->e3c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -270,6 +305,43 @@
                                                 </div>
                                             @endif
                                         </div>
+                                        @if($course->e3c1 == 0 || $course->e3c2 == 0 || $course->e3c3 == 0|| $course->e3c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e3c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="3" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e3c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="3" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e3c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="3" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e3c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="3" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="3">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -278,7 +350,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Trabajo de Equipo 1</h4>
-                                        @if($course->e4 == 0)
+                                        @if($course->e4c1 == 0 || $course->e4c2 == 0 || $course->e4c3 == 0|| $course->e4c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -339,6 +411,43 @@
                                                 para adivinar el dibujo.
                                             @endif
                                         </p>
+                                        @if($course->e4c1 == 0 || $course->e4c2 == 0 || $course->e4c3 == 0|| $course->e4c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e4c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="4" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e4c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="4" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e4c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="4" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e4c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="4" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="4">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -347,7 +456,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Trabajo en Equipo 2</h4>
-                                        @if($course->e5 == 0)
+                                        @if($course->e5c1 == 0 || $course->e5c2 == 0 || $course->e5c3 == 0|| $course->e5c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -375,6 +484,43 @@
 
                                         </h5>
                                         </p>
+                                        @if($course->e5c1 == 0 || $course->e5c2 == 0 || $course->e5c3 == 0|| $course->e5c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e5c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="5" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e5c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="5" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e5c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="5" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e5c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="5" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="5">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="timeline-body">
                                         <p>
@@ -417,7 +563,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 1</h4>
-                                        @if($course->e6 == 0)
+                                        @if($course->e6c1 == 0 || $course->e6c2 == 0 || $course->e6c3 == 0|| $course->e6c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -460,6 +606,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e6c1 == 0 || $course->e6c2 == 0 || $course->e6c3 == 0|| $course->e6c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e6c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="6" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e6c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="6" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e6c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="6" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e6c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="6" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="6">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -470,7 +654,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 2</h4>
-                                        @if($course->e7 == 0)
+                                        @if($course->e7c1 == 0 || $course->e7c2 == 0 || $course->e7c3 == 0|| $course->e7c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -512,6 +696,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e7c1 == 0 || $course->e7c2 == 0 || $course->e7c3 == 0|| $course->e7c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e7c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="7" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e7c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="7" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e7c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="7" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e7c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="7" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="7">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -520,7 +742,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Comunicación Asertiva 1</h4>
-                                        @if($course->e8 == 0)
+                                        @if($course->e8c1 == 0 || $course->e8c2 == 0 || $course->e8c3 == 0|| $course->e8c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -583,6 +805,43 @@
                                                 Kinytron, Athom y Jefe.
                                             @endif
                                         </p>
+                                        @if($course->e8c1 == 0 || $course->e8c2 == 0 || $course->e8c3 == 0|| $course->e8c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e8c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="8" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e8c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="8" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e8c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="8" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e8c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="8" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="8">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -591,7 +850,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Comunicación Asertiva 2</h4>
-                                        @if($course->e9 == 0)
+                                        @if($course->e9c1 == 0 || $course->e9c2 == 0 || $course->e9c3 == 0|| $course->e9c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -651,6 +910,43 @@
                                             @endif
 
                                         </p>
+                                        @if($course->e9c1 == 0 || $course->e9c2 == 0 || $course->e9c3 == 0|| $course->e9c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e9c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="9" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e9c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="9" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e9c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="9" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e9c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="9" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="9">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -659,7 +955,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 2</h4>
-                                        @if($course->e10 == 0)
+                                        @if($course->e10c1 == 0 || $course->e10c2 == 0 || $course->e10c3 == 0|| $course->e10c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -702,6 +998,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e10c1 == 0 || $course->e10c2 == 0 || $course->e10c3 == 0|| $course->e10c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e10c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="10" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e10c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="10" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e10c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="10" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e10c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="10" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="10">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -712,7 +1046,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 3</h4>
-                                        @if($course->e11 == 0)
+                                        @if($course->e11c1 == 0 || $course->e11c2 == 0 || $course->e11c3 == 0|| $course->e11c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -754,6 +1088,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e11c1 == 0 || $course->e11c2 == 0 || $course->e11c3 == 0|| $course->e11c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e11c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="11" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e11c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="11" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e11c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="11" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e11c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="11" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="11">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -762,7 +1134,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Empatía 1</h4>
-                                        @if($course->e12 == 0)
+                                        @if($course->e12c1 == 0 || $course->e12c2 == 0 || $course->e12c3 == 0|| $course->e12c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -824,6 +1196,44 @@
                                                 a diario.
                                             @endif
                                         </p>
+
+                                        @if($course->e12c1 == 0 || $course->e12c2 == 0 || $course->e12c3 == 0|| $course->e12c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e12c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="12" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e12c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="12" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e12c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="12" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e12c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="12" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="12">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -832,7 +1242,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Empatía 2</h4>
-                                        @if($course->e13 == 0)
+                                        @if($course->e13c1 == 0 || $course->e13c2 == 0 || $course->e13c3 == 0|| $course->e13c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -899,6 +1309,44 @@
                                             @endif
 
                                         </p>
+
+                                        @if($course->e13c1 == 0 || $course->e13c2 == 0 || $course->e13c3 == 0|| $course->e13c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e13c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="13" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e13c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="13" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e13c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="13" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e13c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="13" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="13">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -907,7 +1355,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 3</h4>
-                                        @if($course->e14 == 0)
+                                        @if($course->e14c1 == 0 || $course->e14c2 == 0 || $course->e14c3 == 0|| $course->e14c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -950,6 +1398,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e14c1 == 0 || $course->e14c2 == 0 || $course->e14c3 == 0|| $course->e14c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e14c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="14" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e14c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="14" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e14c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="14" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e14c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="14" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="14">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -960,7 +1446,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 4</h4>
-                                        @if($course->e15 == 0)
+                                        @if($course->e15c1 == 0 || $course->e15c2 == 0 || $course->e15c3 == 0|| $course->e15c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1002,6 +1488,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e15c1 == 0 || $course->e15c2 == 0 || $course->e15c3 == 0|| $course->e15c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e15c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="15" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e15c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="15" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e15c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="15" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e15c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="15" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="15">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -1010,7 +1534,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Disciplina 1</h4>
-                                        @if($course->e16 == 0)
+                                        @if($course->e16c1 == 0 || $course->e16c2 == 0 || $course->e16c3 == 0|| $course->e16c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1074,6 +1598,44 @@
                                             @endif
 
                                         </p>
+
+                                        @if($course->e16c1 == 0 || $course->e16c2 == 0 || $course->e16c3 == 0|| $course->e16c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e16c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="16" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e16c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="16" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e16c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="16" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e16c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="16" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="16">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -1082,7 +1644,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Disciplina 2</h4>
-                                        @if($course->e17 == 0)
+                                        @if($course->e17c1 == 0 || $course->e17c2 == 0 || $course->e17c3 == 0|| $course->e17c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1144,6 +1706,44 @@
                                             @endif
 
                                         </p>
+
+                                        @if($course->e17c1 == 0 || $course->e17c2 == 0 || $course->e17c3 == 0|| $course->e17c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e17c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="17" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e17c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="17" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e17c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="17" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e17c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="17" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="17">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -1152,7 +1752,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 4</h4>
-                                        @if($course->e18 == 0)
+                                        @if($course->e18c1 == 0 || $course->e18c2 == 0 || $course->e18c3 == 0|| $course->e18c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1195,6 +1795,44 @@
                                             @endif
                                         </div>
 
+                                        @if($course->e18c1 == 0 || $course->e18c2 == 0 || $course->e18c3 == 0|| $course->e18c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e18c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="18" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e18c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="18" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e18c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="18" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e18c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="18" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="18">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -1204,7 +1842,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Cierre 1</h4>
-                                        @if($course->e19 == 0)
+                                        @if($course->e19c1 == 0 || $course->e19c2 == 0 || $course->e19c3 == 0|| $course->e19c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1268,6 +1906,44 @@
                                                 sesión la intervención.
                                             @endif
                                         </p>
+
+                                        @if($course->e19c1 == 0 || $course->e19c2 == 0 || $course->e19c3 == 0|| $course->e19c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e19c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="19" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e19c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="19" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e19c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="19" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e19c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="19" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="19">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -1276,7 +1952,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Cierre 2</h4>
-                                        @if($course->e20 == 0)
+                                        @if($course->e20c1 == 0 || $course->e20c2 == 0 || $course->e20c3 == 0|| $course->e20c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
@@ -1336,6 +2012,44 @@
                                                 sana convivencia.
                                             @endif
                                         </p>
+
+                                        @if($course->e20c1 == 0 || $course->e20c2 == 0 || $course->e20c3 == 0|| $course->e20c4 == 0)
+                                            <div class="row">
+                                                <div class="btn-group col-md-12" role="group" aria-label="First group">
+                                                    @if($course->e20c1 == 0)
+                                                        <button type="button" class="btn bg-orange" data-toggle="modal" data-whatever="20" data-criterio="1" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Atención</button>
+                                                    @else
+                                                        <button class="btn bg-orange disabled" type="button">Atención</button>
+                                                    @endif
+                                                    @if($course->e20c2 == 0)
+                                                        <button type="button" class="btn bg-purple" data-toggle="modal" data-whatever="20" data-criterio="2" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Participación</button>
+                                                    @else
+                                                        <button class="btn bg-cyan disabled" type="button">Participación</button>
+                                                    @endif
+                                                    @if($course->e20c3 == 0)
+                                                        <button type="button" class="btn bg-teal" data-toggle="modal" data-whatever="20" data-criterio="3" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Expresión</button>
+                                                    @else
+                                                        <button class="btn bg-teal disabled" type="button">Expresión</button>
+                                                    @endif
+                                                    @if($course->e20c4 == 0)
+                                                        <button type="button" class="btn bg-red" data-toggle="modal" data-whatever="20" data-criterio="4" data-level="{{$course->level}}" data-target="#evaluarAlumnos">Aplicación</button>
+                                                    @else
+                                                        <button class="btn bg-red disabled" type="button">Aplicación</button>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        @else
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    {!! Form::open(['route' => 'searchEvaluation','style'=>'display:inline']) !!}
+                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
+                                                    <input type="hidden" name="workshop_number" id="workshop_number" value="20">
+                                                    {!! Form::button('<i class="fa fa-chart-pie"></i> Ver Estadísticas', ['type' => 'submit', 'class' => 'btn btn-pill btn-block btn-dark'] )  !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
