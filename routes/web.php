@@ -69,4 +69,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('showsug/{suggestion}','SuggestionController@show')->name('suggestion.show');
     Route::resource('measurement','MeasurementController');
     Route::post('measurement/inactive/{measurement}','MeasurementController@inactive')->name('measurement.inactive');
+    Route::get('measurement/escala/{measurement}/{user}','MeasurementController@escala')->name('measurement.escala');
 });

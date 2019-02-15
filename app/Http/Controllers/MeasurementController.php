@@ -3,6 +3,7 @@
 namespace Kinytron\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Kinytron\Charts\Clima;
 use Kinytron\Exam;
 use Kinytron\Http\Resources\Course;
 use Kinytron\Http\Resources\User;
@@ -81,7 +82,30 @@ class MeasurementController extends Controller
      */
     public function show(Measurement $measurement)
     {
-        return view('measurement.escala',compact('measurement'));
+        if($measurement->exam_id == 1){
+            $chart_escala = new Clima();
+            $bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = round($user->answers->where('measurement_id',$measurement->id)->avg('answer'),1);
+                if($score <= 1.6){
+                    $bueno++;
+                }
+                if($score >= 1.7 && $score <= 3.3){
+                    $regular++;
+                }
+                if($score >= 3.4){
+                    $insuficiente++;
+                }
+            }
+            $chart_escala->displayAxes(false)->dataset('Sample', 'doughnut', [$bueno,$regular,$insuficiente])->BackgroundColor(['green','yellow','red']);
+
+            return view('measurement.escala',compact('measurement','chart_escala'));
+        }
+        else{
+            return view('measurement.autoestima',compact('measurement'));
+        }
 
     }
 
@@ -129,5 +153,11 @@ class MeasurementController extends Controller
     public function consult(Request $request){
         $measurements = Measurement::where('active',1)->where('course_id',$request->get('course_id'))->get();
         return MeasurementResource::collection($measurements);
+    }
+    public function escala($measurement , $user){
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        return view('measurement.escalaShow',compact('medicion','usuario'));
+
     }
 }

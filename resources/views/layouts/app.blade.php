@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -83,6 +83,9 @@
                 }
             },
             dom: 'Bfrtip',
+            "sScrollX": "100%",
+            "sScrollXInner": "110%",
+            "bScrollCollapse": true,
             buttons: [
                 //'copyHtml5',
                 'excelHtml5',
@@ -94,6 +97,8 @@
 </script>
 <script src="{{ asset('/js/descriptions.js') }}" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+
 
 </body>
 </html>
