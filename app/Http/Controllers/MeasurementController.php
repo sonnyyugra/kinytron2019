@@ -4,6 +4,8 @@ namespace Kinytron\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Kinytron\Charts\Clima;
+use Kinytron\Charts\IndClima;
+use Kinytron\Charts\IndividualClima;
 use Kinytron\Exam;
 use Kinytron\Http\Resources\Course;
 use Kinytron\Http\Resources\User;
@@ -155,9 +157,55 @@ class MeasurementController extends Controller
         return MeasurementResource::collection($measurements);
     }
     public function escala($measurement , $user){
+        $individual = new IndClima();
+        $uno = 0; // Muy de acuerdo
+        $dos = 0; // De acuerdo
+        $tres = 0; // Ni de acuerdo ni desacuerdo
+        $cuatro = 0; // En desacuerdo
+        $cinco = 0; // Muy en desacuerdo
         $medicion = Measurement::find($measurement);
         $usuario = \Kinytron\User::find($user);
-        return view('measurement.escalaShow',compact('medicion','usuario'));
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $uno++;
+            }
+            if($answer->answer == 2){
+                $dos++;
+            }
+            if($answer->answer == 3){
+                $tres++;
+            }
+            if($answer->answer == 4){
+                $cuatro++;
+            }
+            if($answer->answer == 5){
+                $cinco++;
+            }
+        }
+        $preguntas = collect([
+            "Cuando los estudiantes rompen las reglas, son tratados con firmeza pero de manera justa",
+            "Mis profesores son justos.",
+            "Obedecer las reglas en mi escuela tiene beneficios.",
+            "Las reglas en mi escuela son justas.",
+            "Los profesores hacen un buen trabajo protegiendo a los estudiantes de los revoltosos.",
+            "Cuando me quejo de alguien que me está haciendo daño, los profesores me ayudan.",
+            "En mi escuela hay reglas claras y conocidas contra la violencia.",
+            "En mi escuela hay reglas claras y conocidas contra el acoso sexual.",
+            "Cuando los compañeros/as acosan sexualmente a otros compañeros/as, los profesores los detienen.",
+            "En mi escuela, los estudiantes participan tomando decisiones importantes y haciendo las reglas.",
+            "En mi escuela los estudiantes juegan un rol importante cuando se trata de hacerse cargo de problemas de violencia",
+            "El personal de mi escuela se esfuerza en que los estudiantes participen en las decisiones importantes.",
+            "Cuando los estudiantes tienen una emergencia (o un problema serio), un adulto siempre está allí para ayudar.",
+            "Mis profesores me respetan.",
+            "Puedo confiar en la mayoría de los adultos en esta escuela.",
+            "Mi relación con mis profesores es buena y cercana.s",
+            "Los profesores en esta escuela cuidan a los estudiantes.",
+            "Me siento cómodo/a hablando con mis profesores cuando tengo un problema."
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$uno,$dos,$tres,$cuatro,$cinco])->BackgroundColor(['green','#adff2f','yellow','#ff4500','red']);
+
+
+        return view('measurement.escalaShow',compact('medicion','usuario','preguntas','individual'));
 
     }
 }
