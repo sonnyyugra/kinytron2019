@@ -39,7 +39,7 @@
                         <ul class="timeline">
                             <!-- introduccion -->
                             <li class="timeline-inverted">
-                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/1.pdf')}}" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
+                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/1.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Introducción 1</h4>
@@ -149,7 +149,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/2.pdf')}}" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a> </div>
+                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/2.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Introducción 2</h4>
@@ -260,7 +260,7 @@
                             <!-- introduccion -->
                             <!-- trabajo en equipo -->
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/3.pdf')}}" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/3.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 1</h4>
@@ -346,7 +346,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/4.pdf')}}" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/4.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Trabajo de Equipo 1</h4>
@@ -452,7 +452,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/5.pdf')}}" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/5.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Trabajo en Equipo 2</h4>
@@ -559,7 +559,7 @@
                                 </div>
                             </li>
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/6.pdf')}}" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/6.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 1</h4>
@@ -650,7 +650,7 @@
                             <!-- trabajo en equipo fin -->
                             <!-- comunicacion asertiva -->
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/6.pdf')}}" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/7.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 2</h4>
@@ -738,7 +738,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/7.pdf')}}" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/8.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Comunicación Asertiva 1</h4>
@@ -846,7 +846,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/8.pdf')}}" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
+                                <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/9.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Comunicación Asertiva 2</h4>
@@ -951,7 +951,7 @@
                                 </div>
                             </li>
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/9.pdf')}}" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/10.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 2</h4>
@@ -1042,7 +1042,7 @@
                             <!-- comunicacion asertiva fin -->
                             <!-- empatia -->
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/9.pdf')}}" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/11.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 3</h4>
@@ -1130,7 +1130,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge bg-indigo" id="abc" ><i class="fa fa-brain" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge bg-indigo" id="abc" ><a href="{{asset('workshops/'.$course->level.'/12.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Empatía 1</h4>
@@ -1238,7 +1238,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge bg-indigo" id="abc" ><i class="fa fa-brain" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge bg-indigo" id="abc" ><a href="{{asset('workshops/'.$course->level.'/13.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Empatía 2</h4>
@@ -1351,7 +1351,7 @@
                                 </div>
                             </li>
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><i class="fa fa-gamepad" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/14.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 3</h4>
@@ -1442,7 +1442,7 @@
                             <!-- empatia fin -->
                             <!-- disciplina -->
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><i class="fa fa-gamepad" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/15.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Módulo 4</h4>
@@ -1530,7 +1530,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge bg-yellow" id="abc" ><i class="fa fa-brain" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge bg-yellow" id="abc" ><a href="{{asset('workshops/'.$course->level.'/16.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Disciplina 1</h4>
@@ -1640,7 +1640,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge bg-yellow" id="abc" ><i class="fa fa-brain" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge bg-yellow" id="abc" ><a href="{{asset('workshops/'.$course->level.'/17.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Disciplina 2</h4>
@@ -1748,7 +1748,7 @@
                                 </div>
                             </li>
                             <li class="timeline">
-                                <div class="timeline-badge success" id="abc" ><i class="fa fa-gamepad" style="margin-left: 13px"></i></div>
+                                <div class="timeline-badge success" id="abc" ><a href="{{asset('workshops/'.$course->level.'/18.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-gamepad" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Videojuego 4</h4>
@@ -1838,7 +1838,7 @@
                             </li>
                             <!-- conclusion -->
                             <li class="timeline-inverted">
-                                <div class="timeline-badge danger" id="abc" ><i class="fa fa-file-word" style="margin-left: 17px"></i></div>
+                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/19.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Cierre 1</h4>
@@ -1948,7 +1948,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-badge danger" id="abc" ><i class="fa fa-file-word" style="margin-left: 17px"></i></div>
+                                <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/20.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Cierre 2</h4>

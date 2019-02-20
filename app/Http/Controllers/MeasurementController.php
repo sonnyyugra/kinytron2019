@@ -3,7 +3,9 @@
 namespace Kinytron\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Kinytron\Charts\Autoestima;
 use Kinytron\Charts\Clima;
+use Kinytron\Charts\IndAutoestima;
 use Kinytron\Charts\IndClima;
 use Kinytron\Charts\IndividualClima;
 use Kinytron\Exam;
@@ -106,7 +108,32 @@ class MeasurementController extends Controller
             return view('measurement.escala',compact('measurement','chart_escala'));
         }
         else{
-            return view('measurement.autoestima',compact('measurement'));
+            $chart_autoestima = new Autoestima();
+            $muy_bueno = 0;
+            $bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            $deficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 20 && $score <=27){
+                    $deficiente++;
+                }
+                if($score >= 28 && $score <=36){
+                    $insuficiente++;
+                }
+                if($score >= 37 && $score <=45){
+                    $regular++;
+                }
+                if($score >= 46 && $score <=54){
+                    $bueno++;
+                }
+                if($score >= 55 && $score <=60){
+                    $muy_bueno++;
+                }
+            }
+            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
+            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
         }
 
     }
@@ -207,5 +234,48 @@ class MeasurementController extends Controller
 
         return view('measurement.escalaShow',compact('medicion','usuario','preguntas','individual'));
 
+    }
+    public function autoestima($measurement,$user){
+        $individual = new IndAutoestima();
+        $acuerdo = 0; // Muy de acuerdo
+        $nose = 0; // Nose
+        $desacuerdo = 0; // Desacuerdo
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $desacuerdo++;
+            }
+            if($answer->answer == 2){
+                $nose++;
+            }
+            if($answer->answer == 3){
+                $acuerdo++;
+            }
+        }
+        $preguntas = collect([
+            "Soy una persona con muchas cualidades",
+            "Por lo general, si tengo algo que decir lo digo",
+            "Con frecuencia meavergüenzo de mi mismo",
+            "Casi siempre me siento seguro de lo que pienso",
+            "En realidad, no me gusto a mi mismo",
+            "Rara vez me siento culpable de cosas que he hecho",
+            "Creo que la gente tiene buena opinión de mí",
+            "Soy bastante feliz",
+            "Me siento orgulloso de lo que hago",
+            "Poca gente me hace caso",
+            "Hay muchas cosas de mí que cambiaría si pudiera",
+            "Me cuesta mucho trabajo hablar delante de la gente",
+            "Casi nunca estoy triste",
+            "Es muy difícil ser uno mismo",
+            "Es fácil que yo le caiga bien a la gente",
+            "Si pudiéramos volver al pasado y vivir de nuevo, yo sería distinto",
+            "Por lo general, la gente me hace caso cuando los aconsejo",
+            "Siempre tiene que haber alguien que me diga que hacer",
+            "Con frecuencia desearía ser otra persona",
+            "Me siento bastante seguro de mí mismo",
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$acuerdo,$nose,$desacuerdo])->BackgroundColor(['green','yellow','red']);
+        return view('measurement.autoestimaShow',compact('medicion','usuario','preguntas','individual'));
     }
 }

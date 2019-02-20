@@ -6,10 +6,10 @@
             <div class="card">
                 <div class="card-body p-5">
                     <div class="text-center d-lg-none">
-                        <img src="svg/modulr.svg" class="mb-5" width="150" alt="Modulr Logo">
+                        <img src="{{asset('img/isotipo.png')}}" class="mb-5" width="120" alt="Kinytron">
                     </div>
-                    <h1>{{ __('Login') }}</h1>
-                    <p class="text-muted">Sign In to your account</p>
+                    <h1 align="center">{{ __('Login') }}</h1>
+                    <p class="text-muted" align="center">Accede a tu cuenta</p>
 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -17,7 +17,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">@</span>
                             </div>
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" required autofocus>
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" required autofocus>
 
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
                                 <i class="icon-lock"></i>
                             </span>
                             </div>
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" required>
+                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Contraseña') }}" required>
 
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback" role="alert">
@@ -44,19 +44,19 @@
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 <label class="form-check-label" for="remember">
-                                    {{ __('Remember Me') }}
+                                    {{ __('Recuerdame') }}
                                 </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4">
                                 <button type="submit" class="btn btn-primary px4">
-                                    {{ __('Login') }}
+                                    {{ __('Entrar') }}
                                 </button>
                             </div>
                             <div class="col-8 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Olvidaste tu contraseña?') }}
                                 </a>
                             </div>
                         </div>
@@ -64,17 +64,15 @@
                 </div>
                 <div class="card-footer p-4 d-lg-none">
                     <div class="col-12 text-right">
-                        <a class="btn btn-outline-primary btn-block mt-3" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <!-- <a class="btn btn-outline-primary btn-block mt-3" href="{{ route('register') }}">{{ __('Register') }}</a>  -->
                     </div>
                 </div>
             </div>
             <div class="card text-white bg-primary py-5 d-md-down-none">
                 <div class="card-body text-center">
-                    <div>
-                        <img src="svg/modulr.svg" class="mb-5" width="150" alt="Modulr Logo">
-                        <h2>{{ __('Sign up') }}</h2>
-                        <p>If you don't have account create one.</p>
-                        <a class="btn btn-primary active mt-2" href="{{ route('register') }}">{{ __('Register Now!') }}</a>
+                    <div align="center">
+                        <img src="{{asset('img/cara.png')}}" class="mb-5" width="190" alt="logo">
+
                     </div>
                 </div>
             </div>

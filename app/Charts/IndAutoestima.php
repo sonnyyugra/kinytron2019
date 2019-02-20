@@ -2,9 +2,9 @@
 
 namespace Kinytron\Charts;
 
-use ConsoleTVs\Charts\Classes\Frappe\Chart;
+use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 
-class IndividualClima extends Chart
+class IndAutoestima extends Chart
 {
     /**
      * Initializes the chart.
@@ -14,13 +14,12 @@ class IndividualClima extends Chart
     public function __construct()
     {
         parent::__construct();
-        $this->labels(['Muy de acuerdo', 'De acuerdo', 'Ni de acuerdo ni en desacuerdo', 'En desacuerdo', 'Muy en desacuerdo'])
+        $this->labels(['De acuerdo', 'No se', 'Estoy en desacuerdo'])
             ->options([
                 'responsive' => true,
                 'animation' => [
                     'duration' => 3000,
                 ],
-                'colors' => ['green','#adff2f','yellow','#ff4500','red']
             ]);
     }
 }

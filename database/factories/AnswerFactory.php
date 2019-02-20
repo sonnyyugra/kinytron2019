@@ -8,7 +8,7 @@ $autoIncrement = autoIncrement();
 $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncrement){
     $autoIncrement->next();
     return [
-        'answer' => $faker->numberBetween(1,5),
+        'answer' => $faker->numberBetween(1,3),
         'question_number' => $autoIncrement->current(),
         'measurement_id' => 1,
     ];
@@ -16,9 +16,9 @@ $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncr
 
 function autoIncrement()
 {
-    for ($i = 0; $i < 19; $i++) {
+    for ($i = 0; $i < 21; $i++) {
         yield $i;
-        if($i==18){
+        if($i==20){
             $i = 0;
         }
     }

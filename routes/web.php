@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/contact','MailController@contact');
+Route::post('/contact','MailController@contact')->name('contact');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('showForm','TestController@showForm')->name('showForm');
@@ -70,4 +70,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('measurement','MeasurementController');
     Route::post('measurement/inactive/{measurement}','MeasurementController@inactive')->name('measurement.inactive');
     Route::get('measurement/escala/{measurement}/{user}','MeasurementController@escala')->name('measurement.escala');
+    Route::get('measurement/autoestima/{measurement}/{user}','MeasurementController@autoestima')->name('measurement.autoestima');
+
+});
+Route::get('demo',function (){
+    return view('auth.register');
 });

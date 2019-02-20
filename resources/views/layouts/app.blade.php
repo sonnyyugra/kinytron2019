@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/timeline.css')}}">
+    <link rel="icon" type="image/png" href="{{asset('/img/isotipo.png')}}" />
+    <title>Kinytron</title>
+
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <div id="app">
@@ -95,6 +98,7 @@
         } );
     } );
 </script>
+
 <script src="{{ asset('/js/descriptions.js') }}" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>

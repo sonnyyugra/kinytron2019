@@ -1,10 +1,11 @@
 @component('mail::message')
-    Hola {{$data->nombre}}, nos comunicaremos con usted a la brevedad posible mientras puedes visitar nuestro blog.
 
-    @component('mail::button', ['url' => 'https://blog.kinytron.com'])
-        Click!
-    @endcomponent
+    Hola {{$data->name}}, nos contactaremos con usted a la brevedad. Muchas gracias por su paciencia.
 
-    Gracias,<br>
-    Kinytron Staff
+@component('mail::button', ['url' => 'https://blog.kinytron.com'])
+    Blog
+@endcomponent
+
+Gracias, <br>
+{{ config('app.name') }}
 @endcomponent

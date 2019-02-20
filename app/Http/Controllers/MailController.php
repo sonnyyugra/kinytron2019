@@ -12,18 +12,17 @@ use Alert;
 class MailController extends Controller
 {
     public function contact(Request $request){
+
         $this->validate($request, [
-            'nombre' => 'required',
+            'name' => 'required',
             'cargo' => 'required',
             'colegio' => 'required',
-            'cantidad' => 'required|integer',
-            'pais' => 'required',
             'telefono' => 'required|integer',
             'email' => 'required|email'
         ]);
+
         Mail::to('contacto@kinytron.com')->send(new Contacto($request));
         Mail::to($request->email)->send(new Welcome($request));
-        Alert::success('Te contactaremos a la brevedad!', 'GRACIAS!');
         Session::flash('msg','Gracias, te contactaremos a la brevedad!');
         return redirect('/demo');
     }

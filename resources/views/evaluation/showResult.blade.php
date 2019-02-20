@@ -90,7 +90,6 @@
             </div>
         </div>
     </div>
-
 @endsection
 {!! $chart_c1->script() !!}
 {!! $chart_c2->script() !!}
