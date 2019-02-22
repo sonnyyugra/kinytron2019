@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/timeline.css')}}">
     <link rel="icon" type="image/png" href="{{asset('/img/isotipo.png')}}" />
     <title>Kinytron</title>
-
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <div id="app">
