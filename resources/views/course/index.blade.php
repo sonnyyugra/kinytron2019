@@ -69,7 +69,7 @@
                 <div class="card">
                     <div class="card-header">Opciones</div>
                     <div class="card-body">
-                        <a href="{{ route('college.create') }}" class="btn btn-primary">Agregar nuevo colegio</a>
+                        <a href="{{ route('course.create') }}" class="btn btn-primary">Agregar nuevo curso</a>
                     </div>
                 </div>
             </div>
