@@ -138,7 +138,7 @@ class UserController extends Controller
             'name' => $request->get('name')." ".$request->get('lastname'),
             'college_id' => $request->get('college_id'),
             'course_id' => $request->get('course_id'),
-            'user_type' => 1,
+            'user_type' => 3,
             'password' => bcrypt('123'),
             'email' => $request->get('email'),
         ]);

@@ -50,7 +50,7 @@
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                <button type="submit" class="btn btn-primary px4">
+                                <button type="submit" class="btn btn-success px4">
                                     {{ __('Entrar') }}
                                 </button>
                             </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card text-white bg-primary py-5 d-md-down-none">
+            <div class="card text-white bg-success py-5 d-md-down-none">
                 <div class="card-body text-center">
                     <div align="center">
                         <img src="{{asset('img/cara.png')}}" class="mb-5" width="190" alt="logo">

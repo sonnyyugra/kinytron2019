@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('measurement','MeasurementController@consult');
     Route::post('answer','AnswerController@store');
     Route::post('showanswers','AnswerController@showAnswers');
-
 });
 
 Route::get('users','UserController@users');

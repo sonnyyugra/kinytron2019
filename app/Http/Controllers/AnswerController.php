@@ -40,7 +40,6 @@ class AnswerController extends Controller
         $answer->answer = $request->input('answer');
         $answer->user_id = $request->input('user_id');
         $answer->question_number = $request->input('question_number');
-        $answer->exam_id = $request->input('exam_id');
         $answer->measurement_id = $request->input('measurement_id');
         if($answer->save()){
             return new AnswerResource($answer);
