@@ -64,7 +64,7 @@
                     <i class="icon-pie-chart"></i>
                 </div>
                 <div class="text-value">{{$quantityMeasurements}}</div>
-                <small class="text-muted text-uppercase font-weight-bold">Mediciones realizadas</small>
+                <small class="text-muted text-uppercase font-weight-bold">Mediciones</small>
                 <div class="progress progress-xs mt-3 mb-0">
                     <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -107,77 +107,264 @@
                                             $porcentaje = 0
                                             )
 
-                                        @if($course->e1 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e1c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e2 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e1c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e3 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e1c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e4 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e1c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e5 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+
+                                        @if($course->e2c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e6 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e2c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e7 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e2c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e8 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e2c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e9 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+
+                                        @if($course->e3c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e10 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e3c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e11 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e3c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e12 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e3c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e13 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+
+                                        @if($course->e4c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e14 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e4c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e15 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e4c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e16 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e4c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e17 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+
+                                        @if($course->e5c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e18 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e5c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e19 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e5c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e20 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e5c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e21 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+
+                                        @if($course->e6c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e22 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e6c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e23 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e6c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
-                                        @if($course->e24 == 1)
-                                            @php($porcentaje = $porcentaje + 4.1666)
+                                        @if($course->e6c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e7c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e7c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e7c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e7c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e8c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e8c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e8c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e8c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e9c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e9c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e9c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e9c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e10c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e10c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e10c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e10c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e11c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e11c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e11c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e11c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e12c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e12c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e12c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e12c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e13c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e13c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e13c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e13c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e14c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e14c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e14c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e14c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e15c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e15c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e15c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e15c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e16c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e16c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e16c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e16c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e17c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e17c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e17c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e17c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e18c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e18c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e18c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e18c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e19c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e19c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e19c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e19c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+
+                                        @if($course->e20c1 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e20c2 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e20c3 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
+                                        @endif
+                                        @if($course->e20c4 == 1)
+                                            @php($porcentaje = $porcentaje + 1.25)
                                         @endif
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40"

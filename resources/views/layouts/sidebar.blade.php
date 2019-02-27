@@ -4,7 +4,7 @@
             @if(Auth::user()->user_type == 5)
                 <li class="nav-item">
                     <a class="nav-link active" href="/home">
-                        <i class="nav-icon icon-speedometer"></i> Dashboard
+                        <i class="nav-icon icon-speedometer"></i> Inicio
                     </a>
                 </li>
             @endif
