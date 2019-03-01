@@ -14,7 +14,7 @@ class Autoestima extends Chart
     public function __construct()
     {
         parent::__construct();
-        $this->labels(['Deficiente', 'Insuficiente', 'Regular', 'Bueno', 'Muy Bueno'])
+        $this->labels(['Deficiente (20-27)', 'Insuficiente (28-36)', 'Regular (37-45)', 'Bueno (46-54)', 'Muy Bueno (55-60)'])
             ->options([
                 'responsive' => false,
                 'animation' => [

@@ -29,6 +29,7 @@
                     <div class="card-header" align="center">Resultados</div>
 
                     <div class="card-body">
+
                         <table id="example"  style="width:100%" class="table table-bordered">
                             <thead>
                             <tr>
@@ -42,7 +43,18 @@
                                     <td>
                                         <a href="{!! route('measurement.autoestima', ['measurement'=>$measurement->id, 'user'=>$user->id]) !!}">{{$user->name}}</a>
                                     </td>
-                                    <td>{{ $user->answers->where('measurement_id',$measurement->id)->sum('answer') }}</td>
+                                    @php($total = $user->answers->where('measurement_id',$measurement->id)->sum('answer'))
+                                    @if($total >= 20 && $total <= 27)
+                                        <td bgcolor="red">{!! $total !!}</td>
+                                    @elseif($total >=28 && $total <= 36)
+                                        <td bgcolor="orange">{!! $total !!}</td>
+                                    @elseif($total >=37 && $total <= 45)
+                                        <td bgcolor="yellow">{!! $total !!}</td>
+                                    @elseif($total >=46 && $total <= 54)
+                                        <td bgcolor="blue">{!! $total !!}</td>
+                                    @elseif($total >=55 && $total <= 60)
+                                        <td bgcolor="green">{!! $total !!}</td>
+                                    @endif
                                 </tr>
                             @endforeach
                             </tbody>
