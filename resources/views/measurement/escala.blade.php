@@ -54,7 +54,14 @@
                                     <td>
                                         <a href="{!! route('measurement.escala', ['measurement'=>$measurement->id, 'user'=>$user->id]) !!}">{{$user->name}}</a>
                                     </td>
-                                    <td>{{ round($user->answers->where('measurement_id',$measurement->id)->avg('answer'),1) }}</td>
+                                    @php($total = round($user->answers->where('measurement_id',$measurement->id)->avg('answer'),1))
+                                    @if($total >= 3.4 && $total <= 5)
+                                        <td bgcolor="red">{!! $total !!}</td>
+                                    @elseif($total >=1.7 && $total <= 3.3)
+                                        <td bgcolor="yellow">{!! $total !!}</td>
+                                    @elseif($total >=1 && $total <= 1.6)
+                                        <td bgcolor="green">{!! $total !!}</td>
+                                    @endif
                                 </tr>
                             @endforeach
                             </tbody>

@@ -26,6 +26,7 @@
                     <div class="card-header" align="center">{{$usuario->name}}</div>
 
                     <div class="card-body">
+
                         <table class="table table-hover table-striped" data-toggle="dataTable" data-form="deleteForm">
                             <thead>
                             <tr>&nbsp;</tr>

@@ -57,12 +57,12 @@
                                     <td>{{ $measurement->created_at->format('d-m-Y')  }}</td>
                                     <td>
                                         @if($measurement->active == 1)
-                                            Activo
+                                            <span class="badge badge-success">Activo</span>
                                         @else
-                                            Finalizado
+                                            <span class="badge badge-danger">Finalizado</span>
                                         @endif
                                     </td>
-                                    <td width="40px"><a href="{{ route('measurement.show',['measurement' => $measurement]) }}" class="btn btn-info pull-right">Ver resultados</a></td>
+                                    <td width="40px"><a href="{{ route('measurement.show',['measurement' => $measurement]) }}" class="btn btn-info pull-right">Estadísticas</a></td>
                                     <td width="40px">
                                         @if($measurement->active == 1)
                                             {{ Form::open(['method' => 'POST', 'route' => ['measurement.inactive', $measurement],'class' => 'form-delete']) }}
@@ -86,7 +86,7 @@
                                         <h4 class="modal-title">Confirmación</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Estas seguro de eliminar este registro?</p>
+                                        <p>Estas seguro de finalizar la medición?</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-outline" id="delete-btn">Eliminar</button>
@@ -102,7 +102,7 @@
                 <div class="card">
                     <div class="card-header">Opciones</div>
                     <div class="card-body">
-                        <a href="{{ route('measurement.create') }}" class="btn btn-primary">Realizar nueva medición</a>
+                        <a href="{{ route('measurement.create') }}" class="btn btn-primary">Nueva Medición</a>
                     </div>
                 </div>
             </div>

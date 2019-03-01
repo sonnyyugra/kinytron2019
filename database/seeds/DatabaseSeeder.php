@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('measurements')->insert([
             'user_id' => 2,
-            'exam_id' => 2,
+            'exam_id' => 1,
             'course_id' => 1,
             'college_id' => 1,
             'active' => 1,

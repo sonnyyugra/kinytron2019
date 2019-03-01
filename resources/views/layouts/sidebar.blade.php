@@ -35,6 +35,11 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('suggestion.index') }}">
+                    <i class="nav-icon icon-envelope-letter"></i> Sugerencias
+                </a>
+            </li>
             @endif
             @if(Auth::user()->user_type == 5)
                 <li class="nav-item">

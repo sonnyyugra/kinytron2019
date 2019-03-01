@@ -14,6 +14,15 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">Tutores</div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card-body">
                         <table class="table table-hover table-striped" data-toggle="dataTable" data-form="deleteForm">
                             <thead>
