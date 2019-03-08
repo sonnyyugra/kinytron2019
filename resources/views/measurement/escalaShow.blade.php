@@ -40,31 +40,34 @@
                                     <td>
                                         {{$pregunta}}
                                     </td>
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
-                                        <td>
-                                            Muy de acuerdo
-                                        </td>
+                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->isNotEmpty())
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
+                                            <td>
+                                                Muy de acuerdo
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
+                                            <td>
+                                                De acuerdo
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
+                                            <td>
+                                                Ni de acuerdo ni en desacuerdo
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 4)
+                                            <td>
+                                                En desacuerdo
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 5)
+                                            <td>
+                                                Muy en desacuerdo
+                                            </td>
+                                        @endif
                                     @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
-                                        <td>
-                                            De acuerdo
-                                        </td>
-                                    @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
-                                        <td>
-                                            Ni de acuerdo ni en desacuerdo
-                                        </td>
-                                    @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 4)
-                                        <td>
-                                            En desacuerdo
-                                        </td>
-                                    @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 5)
-                                        <td>
-                                            Muy en desacuerdo
-                                        </td>
-                                    @endif
+
                                 </tr>
                             @endforeach
 

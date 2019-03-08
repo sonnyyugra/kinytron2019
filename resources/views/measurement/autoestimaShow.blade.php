@@ -41,21 +41,24 @@
                                     <td>
                                         {{$pregunta}}
                                     </td>
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
-                                        <td>
-                                            Desacuerdo
-                                        </td>
+                                    @if( $usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->isNotEmpty())
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
+                                            <td>
+                                                Desacuerdo
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
+                                            <td>
+                                                No sé
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
+                                            <td>
+                                                De acuerdo
+                                            </td>
+                                        @endif
                                     @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
-                                        <td>
-                                            No sé
-                                        </td>
-                                    @endif
-                                    @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
-                                        <td>
-                                            De acuerdo
-                                        </td>
-                                    @endif
+
 
                                 </tr>
                             @endforeach
