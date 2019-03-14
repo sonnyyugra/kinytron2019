@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="collapse" id="collapseSix" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion" style="">
                                     <div class="card-body">
-                                        <video src="{{asset('video/tutoriales/enviar_sugerencia.mp4')}}" poster="{{asset('img/perfil.jpg')}}" controls width="640" height="360"></video>
+                                        <video src="{{asset('video/tutoriales/descarga_videojuego.mp4')}}" poster="{{asset('img/perfil.jpg')}}" controls width="640" height="360"></video>
 
                                     </div>
                                 </div>
