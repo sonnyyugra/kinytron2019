@@ -33,6 +33,14 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('measurement','MeasurementController@consult');
     Route::post('answer','AnswerController@store');
     Route::post('showanswers','AnswerController@showAnswers');
+    Route::get('item','ItemController@index');
+    Route::post('showItems','ItemController@showItems');
+    Route::post('attachItem','ItemController@attachItem');
+    Route::get('medal','MedalController@index');
+    Route::post('showMedals','MedalController@showMedals');
+    Route::post('attachMedal','MedalController@attachMedal');
+
+
 });
 
 Route::get('users','UserController@users');

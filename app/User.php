@@ -44,5 +44,10 @@ class User extends Authenticatable
     public function answers(){
         return $this->hasMany(Answer::class);
     }
-
+    public function items(){
+        return $this->belongsToMany(Item::class);
+    }
+    public function medals(){
+        return $this->belongsToMany(Medal::class);
+    }
 }
