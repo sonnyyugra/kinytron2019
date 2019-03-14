@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" line="185" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5096acc4-fa28-4200-95b1-6846eee1aec6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="5096acc4-fa28-4200-95b1-6846eee1aec6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -582,12 +577,12 @@
       <workItem from="1551448063285" duration="7034000" />
       <workItem from="1552058168161" duration="4288000" />
       <workItem from="1552404551879" duration="7034000" />
-      <workItem from="1552574751532" duration="12300000" />
+      <workItem from="1552574751532" duration="12331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290650000" />
+    <option name="totallyTimeSpent" value="290681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
