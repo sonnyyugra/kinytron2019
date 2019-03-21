@@ -12,16 +12,16 @@ class AnswerSeeder extends Seeder
     public function run()
     {
         //AUTOESTIMA
-        /*
+
         for($i=3;$i<33;$i++){
             factory(\Kinytron\Answer::class, 20)->create(['user_id' => $i]);
         }
-        */
+        
         //CLIMA
-
+        /*
         for($i=3;$i<33;$i++){
             factory(\Kinytron\Answer::class, 18)->create(['user_id' => $i]);
         }
-
+        */
     }
 }
