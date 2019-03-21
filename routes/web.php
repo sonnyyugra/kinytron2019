@@ -71,7 +71,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('measurement/inactive/{measurement}','MeasurementController@inactive')->name('measurement.inactive');
     Route::get('measurement/escala/{measurement}/{user}','MeasurementController@escala')->name('measurement.escala');
     Route::get('measurement/autoestima/{measurement}/{user}','MeasurementController@autoestima')->name('measurement.autoestima');
-
 });
 Route::get('demo',function (){
     return view('auth.register');
