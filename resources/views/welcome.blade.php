@@ -487,7 +487,7 @@
 
             <div class="grid__item grid__item--x1">
                 <h3 class="grid__title grid__title--footer-logo">KINYTRON</h3>
-                <p class="grid__text grid__text--copyright">Copyright &copy; 2018 YUCOF.  <br />All Rights Reserved. </p>
+                <p class="grid__text grid__text--copyright">Copyright &copy; 2019 YUCOF.  <br />All Rights Reserved. </p>
                 <ul class="grid__list grid__list--sicons">
                     <li><a href="#"><img src="landing/images/social/black/twitter.png" alt="" title=""/></a></li>
                     <li><a href="https://www.facebook.com/KINYTRON/"><img src="landing/images/social/black/facebook.png" alt="" title=""/></a></li>

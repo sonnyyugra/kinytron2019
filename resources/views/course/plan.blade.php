@@ -2101,6 +2101,9 @@
                                         <label class="btn btn-secondary">
                                             <input type="radio" name="evaluations[{{$loop->index}}]" value="3"> Muy Bueno
                                         </label>
+                                        <label class="btn btn-warning">
+                                            <input type="radio" name="evaluations[{{$loop->index}}]" value="0"> Ausente
+                                        </label>
                                     </div>
                                     <input type="hidden" name="users[{{$loop->index}}]" value="{{$user->id}}">
                                 </td>

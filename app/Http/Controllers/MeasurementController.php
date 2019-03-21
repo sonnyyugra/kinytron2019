@@ -93,7 +93,7 @@ class MeasurementController extends Controller
             $insuficiente = 0;
             foreach ($measurement->course->users as $user){
                 $score = round($user->answers->where('measurement_id',$measurement->id)->avg('answer'),1);
-                if($score <= 1.6){
+                if($score <= 1.6 && $score > 0){
                     $bueno++;
                 }
                 if($score >= 1.7 && $score <= 3.3){

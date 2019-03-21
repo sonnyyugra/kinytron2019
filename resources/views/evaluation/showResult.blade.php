@@ -77,6 +77,8 @@
                                             <td bgcolor="yellow" style="color: black" align="center">Regular</td>
                                         @elseif($evaluation->score == 3)
                                             <td bgcolor="green" style="color: white" align="center">Muy Bueno</td>
+                                        @elseif($evaluation->score == 0)
+                                            <td bgcolor="orange" style="color: white" align="center">Ausente</td>
                                         @endif
                                     @endforeach
 
