@@ -89,7 +89,7 @@
                                         <p>Estas seguro de finalizar la medición?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-outline" id="delete-btn">Eliminar</button>
+                                        <button type="button" class="btn btn-outline" id="delete-btn">Finalizar</button>
                                         <button type="button" class="btn btn-outline" data-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
