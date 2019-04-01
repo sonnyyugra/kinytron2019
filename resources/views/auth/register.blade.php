@@ -14,8 +14,8 @@
                 </div>
             @endif
             <div class="card-body p-4">
-                <h1>{{ __('Demo') }}</h1>
-                <p class="text-muted">Conozcámonos</p>
+                <h1>{{ __('Conozcámonos') }}</h1>
+                <p class="text-muted"></p>
 
                 <form action="{{ url('/contact') }}" method="post">
                     @csrf

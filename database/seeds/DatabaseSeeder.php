@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
         $this->call(CollegeTableSeeder::class);
         $this->call(CourseTableSeeder::class);
         DB::table('users')->insert([
@@ -140,6 +139,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Botella llena',
             'description' => 'Una botella de plastico llena de agua'
         ]);
+
 
 
     }

@@ -42,7 +42,7 @@
                                 <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/1.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Introducción 1</h4>
+                                        <h4 class="timeline-title">Autoestima académica y motivación escolar</h4>
                                         @if($course->e1c1 == 0 || $course->e1c2 == 0 || $course->e1c3 == 0|| $course->e1c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -58,10 +58,10 @@
                                                 Conoce tu compañero
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Dibujo en equipo
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Conoce tu compañero
                                             @endif
                                             @if($course->level == 7)
                                                 Conozcámonos
@@ -88,10 +88,16 @@
                                                 pareja y tomar atención.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces en
+                                                complementar los dibujos
+                                                para obtener el resultado
+                                                solicitado del paisaje.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces en conocer a su
+                                                pareja y tomar atención.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
@@ -152,7 +158,7 @@
                                 <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/2.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Introducción 2</h4>
+                                        <h4 class="timeline-title">Autoestima académica y motivación escolar</h4>
                                         @if($course->e2c1 == 0 || $course->e2c2 == 0 || $course->e2c3 == 0|| $course->e2c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -167,10 +173,10 @@
                                                 Mi descripción
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                El perfil
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Mi descripción
                                             @endif
                                             @if($course->level == 7)
                                                 Escoger a un líder
@@ -197,10 +203,16 @@
                                                 compañero.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces de complementar
+                                                su perfil y adivinar de
+                                                quién es el perfil.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces reconocer
+                                                positivas de su
+                                                compañero.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
@@ -349,7 +361,7 @@
                                 <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/4.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Trabajo de Equipo 1</h4>
+                                        <h4 class="timeline-title">Clima de convivencia escolar</h4>
                                         @if($course->e4c1 == 0 || $course->e4c2 == 0 || $course->e4c3 == 0|| $course->e4c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -364,10 +376,10 @@
                                                 Sobrevivencia
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Confía en mi
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Monoquemado
                                             @endif
                                             @if($course->level == 7)
                                                 Excursión
@@ -383,7 +395,7 @@
                                             @if($course->level == 3)
                                                 Los alumnos deben
                                                 desarrollar la confianza
-                                                en sí mismo y seguir las
+                                                en sí mismos y seguir las
                                                 instrucciones que dirige
                                                 el tutor.
                                             @endif
@@ -394,10 +406,16 @@
                                                 llevar en el desierto.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces en confiar en su
+                                                pareja para seguir las
+                                                instrucciones hasta llegar
+                                                a la señalética.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces de adivinar
+                                                palabras de videojuegos.
                                             @endif
                                             @if($course->level == 7)
                                                 Los equipos deben
@@ -455,7 +473,7 @@
                                 <div class="timeline-badge info" id="abc" ><a href="{{asset('workshops/'.$course->level.'/5.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Trabajo en Equipo 2</h4>
+                                        <h4 class="timeline-title">Clima de convivencia escolar</h4>
                                         @if($course->e5c1 == 0 || $course->e5c2 == 0 || $course->e5c3 == 0|| $course->e5c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -470,10 +488,10 @@
                                                 La cadena
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Encontrando mi casa
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Adivina las casillas
                                             @endif
                                             @if($course->level == 7)
                                                 Creatividad
@@ -529,7 +547,8 @@
                                                 desarrollar la confianza
                                                 entre compañeros y
                                                 seguir las instrucciones
-                                                que dirige el tutor.                                            @endif
+                                                que dirige el tutor.
+                                            @endif
                                             @if($course->level == 4)
                                                 Los alumnos deben ser
                                                 capaces en desenredarse,
@@ -537,10 +556,18 @@
                                                 vuelta.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces en seguir
+                                                instrucciones para lograr
+                                                que cada inquilino tenga
+                                                su casa.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces de adivinar cada
+                                                letras hasta completar
+                                                conceptos sobre
+                                                habilidades sociales.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben
@@ -664,7 +691,7 @@
                                     <div class="timeline-body">
                                         <p>
                                             Los alumnos deben ser
-                                            capaz en cumplir las
+                                            capaces en cumplir las
                                             misiones con el objetivo
                                             de lograr en percibir la
                                             comunicación asertiva.
@@ -733,7 +760,6 @@
                                                 </div>
                                             </div>
                                         @endif
-
                                     </div>
                                 </div>
                             </li>
@@ -741,7 +767,7 @@
                                 <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/8.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Comunicación Asertiva 1</h4>
+                                        <h4 class="timeline-title">Participación y formación ciudadana</h4>
                                         @if($course->e8c1 == 0 || $course->e8c2 == 0 || $course->e8c3 == 0|| $course->e8c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -755,10 +781,10 @@
                                                 Rol de Personaje
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Controlar las emociones
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                La caja comunicativa
                                             @endif
                                             @if($course->level == 7)
                                                 Haz tu propio teatro
@@ -785,10 +811,16 @@
                                                 personaje.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben
+                                                capaces en responder las
+                                                preguntas de manera
+                                                asertiva.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben
+                                                capaces de escribir sus
+                                                malestares de forma
+                                                asertiva.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben
@@ -849,7 +881,7 @@
                                 <div class="timeline-badge warning" id="abc" ><a href="{{asset('workshops/'.$course->level.'/9.pdf')}}" target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a> </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Comunicación Asertiva 2</h4>
+                                        <h4 class="timeline-title">Participación y formación ciudadana</h4>
                                         @if($course->e9c1 == 0 || $course->e9c2 == 0 || $course->e9c3 == 0|| $course->e9c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -863,10 +895,10 @@
                                                 Actuar y resolver
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Asertivo, pasivo y agresivo
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                ¿Cuál comunicación soy?
                                             @endif
                                             @if($course->level == 7)
                                                 ¿Que harías, sí?
@@ -891,10 +923,17 @@
                                                 comunicación.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben
+                                                identificar las
+                                                interpretaciones de
+                                                comunicación.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben
+                                                identificar cuál
+                                                comunicación me
+                                                identifica en mi vida
+                                                diaria.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben
@@ -966,8 +1005,8 @@
                                         <p>
                                             Los alumnos deben
                                             contestar las preguntas
-                                            dirigidas al trabajo en
-                                            equipo para observar si
+                                            dirigidas a la comunicacion
+                                            asertiva para observar si
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
@@ -1056,7 +1095,7 @@
                                     <div class="timeline-body">
                                         <p>
                                             Los alumnos deben ser
-                                            capaz en cumplir las
+                                            capaces en cumplir las
                                             misiones con el objetivo
                                             de lograr en percibir la
                                             empatía.
@@ -1133,7 +1172,7 @@
                                 <div class="timeline-badge bg-indigo" id="abc" ><a href="{{asset('workshops/'.$course->level.'/12.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Empatía 1</h4>
+                                        <h4 class="timeline-title">Clima de convivencia escolar</h4>
                                         @if($course->e12c1 == 0 || $course->e12c2 == 0 || $course->e12c3 == 0|| $course->e12c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1147,10 +1186,10 @@
                                                 Expresa tu dibujo
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Ser empático
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                El ovillo empático
                                             @endif
                                             @if($course->level == 7)
                                                 Kinytron
@@ -1177,10 +1216,18 @@
                                                 representación.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces de identificar
+                                                que parte de la escena del
+                                                videojuego se presenta la
+                                                empatía.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces de conocer y
+                                                saber lo que le ocurre a la
+                                                persona antes de juzgarlo
+                                                por la apariencia.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
@@ -1241,7 +1288,7 @@
                                 <div class="timeline-badge bg-indigo" id="abc" ><a href="{{asset('workshops/'.$course->level.'/13.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Empatía 2</h4>
+                                        <h4 class="timeline-title">Clima de convivencia escolar</h4>
                                         @if($course->e13c1 == 0 || $course->e13c2 == 0 || $course->e13c3 == 0|| $course->e13c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1255,10 +1302,10 @@
                                                 Describir el objeto
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Ponte en sus zapatos
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Mi carácter
                                             @endif
                                             @if($course->level == 7)
                                                 Conflictos
@@ -1287,10 +1334,18 @@
                                                 positiva.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces de empatizar con
+                                                sus compañero(a) y
+                                                ponerse los zapatos de él
+                                                o ella.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces de interpretar el
+                                                carácter de su
+                                                compañero(a) de manera
+                                                asertiva.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
@@ -1366,8 +1421,7 @@
                                         <p>
                                             Los alumnos deben
                                             contestar las preguntas
-                                            dirigidas al trabajo en
-                                            equipo para observar si
+                                            dirigidas a la empatía para observar si
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
@@ -1456,7 +1510,7 @@
                                     <div class="timeline-body">
                                         <p>
                                             Los alumnos deben ser
-                                            capaz en cumplir las
+                                            capaces en cumplir las
                                             misiones con el objetivo
                                             de lograr en percibir la
                                             disciplina.
@@ -1533,7 +1587,7 @@
                                 <div class="timeline-badge bg-yellow" id="abc" ><a href="{{asset('workshops/'.$course->level.'/16.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Disciplina 1</h4>
+                                        <h4 class="timeline-title">Hábitos de vida saludable</h4>
                                         @if($course->e16c1 == 0 || $course->e16c2 == 0 || $course->e16c3 == 0|| $course->e16c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1541,22 +1595,22 @@
                                         @endif
                                         <p><h5 class="text-muted"><i class="fa fa-smile-beam"></i>
                                             @if($course->level == 3)
-                                                Comportamiento
+                                                Excursión
                                             @endif
                                             @if($course->level == 4)
-                                                Quiero cambiar
+                                                Nuevos hábitos
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Hidratación
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Recorrido
                                             @endif
                                             @if($course->level == 7)
-                                                Plan de Intervención
+                                                Disciplina en hábitos
                                             @endif
                                             @if($course->level == 8)
-                                                Describirse positivo
+                                                Beneficio de hidratación
                                             @endif
                                         </h5>
                                         </p>
@@ -1565,40 +1619,42 @@
                                         <p>
                                             @if($course->level == 3)
                                                 Los alumnos deben ser
-                                                capaces en crear las
-                                                normas para mantener
-                                                un buen clima de aula
+                                                capaces de utilizar la disciplina
+                                                como hábito de vida saludable
                                             @endif
                                             @if($course->level == 4)
                                                 Los alumnos deben ser
                                                 capaces en
-                                                comprometerse que
-                                                conductas quieren
-                                                cambiar.
+                                                identificar que alimentos son
+                                                saludables para reducir alteraciones
+                                                del cuerpo humano
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces en
+                                                tomar conciencia en la
+                                                cantidad de agua que necesitan
+                                                para hidratarse correctamente
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces en tomar
+                                                conciencia del hábito
+                                                de vida saludable como
+                                                la disciplina
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
-                                                capaces en crear un plan de
-                                                intervención para
-                                                mejorar el
-                                                comportamiento de
-                                                Thalion.
+                                                capaces de reconocer
+                                                que alimentos son saludables
+                                                para prevenir enfermedades
                                             @endif
                                             @if($course->level == 8)
-                                                Los alumnos deben ser
-                                                capaz en verse
-                                                características positiva
-                                                de sí mismo.
+                                                Los alumnos deben
+                                                ser capaces de tomar
+                                                conciencia en hidratarse
                                             @endif
-
                                         </p>
-
                                         @if($course->e16c1 == 0 || $course->e16c2 == 0 || $course->e16c3 == 0|| $course->e16c4 == 0)
                                             <div class="row">
                                                 <div class="btn-group col-md-12" role="group" aria-label="First group">
@@ -1643,7 +1699,7 @@
                                 <div class="timeline-badge bg-yellow" id="abc" ><a href="{{asset('workshops/'.$course->level.'/17.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-brain" style="margin-left: 13px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Disciplina 2</h4>
+                                        <h4 class="timeline-title">Hábitos de vida saludable</h4>
                                         @if($course->e17c1 == 0 || $course->e17c2 == 0 || $course->e17c3 == 0|| $course->e17c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1651,22 +1707,22 @@
                                         @endif
                                         <p><h5 class="text-muted"><i class="fa fa-smile-beam"></i>
                                             @if($course->level == 3)
-                                                Advertencia
+                                                Alimentos saludables
                                             @endif
                                             @if($course->level == 4)
-                                                Animar lo positivo
+                                                Carbohidratos
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                El agua
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Comer bien
                                             @endif
                                             @if($course->level == 7)
-                                                Mejorando a mí mismo
+                                                Tipos de carbohidrato
                                             @endif
                                             @if($course->level == 8)
-                                                ¿Cómo te sientes?
+                                                Buena hidratación
                                             @endif
 
                                         </h5>
@@ -1676,33 +1732,39 @@
                                         <p>
                                             @if($course->level == 3)
                                                 Los alumnos deben ser
-                                                capaces en crear señales
-                                                para crear conciencia de
-                                                los actos.
+                                                capaces en saber
+                                                que alimentos consumir
+                                                de lunes a viernes para obtener una
+                                                vida saludable
                                             @endif
                                             @if($course->level == 4)
                                                 Los alumnos deben ser
-                                                capaces en resaltar lo
-                                                positivo de sus
-                                                compañeros(as)
+                                                capaces de saber que
+                                                carbohidratos son saludables
+                                                y tomar conciencia de la
+                                                cantidad que deberían
+                                                consumir
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben
+                                                ser capaces de identificar
+                                                los beneficios del agua
+                                                y la cantidad de agua recomendable
+                                                que deben consumir
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser capaces de crear
+                                                hábitos saludables como disciplina diaria
                                             @endif
                                             @if($course->level == 7)
-                                                Los alumnos deben ser
-                                                capaces en observar sus
-                                                propios comportamiento
-                                                y proponerse a
-                                                mejorarlo.
+                                                Los alumnos deben ser capaces
+                                                de identificar los tipos de
+                                                carbohidratos
                                             @endif
                                             @if($course->level == 8)
-                                                Los alumnos deben ser
-                                                capaz en reconocer como
-                                                se siente cada uno.
+                                                Los alumnos deben ser capaces
+                                                en saber cuanta agua debemos tomar
+                                                para obtener una buena hidratación
                                             @endif
 
                                         </p>
@@ -1763,8 +1825,8 @@
                                         <p>
                                             Los alumnos deben
                                             contestar las preguntas
-                                            dirigidas al trabajo en
-                                            equipo para observar si
+                                            dirigidas a la disciplina
+                                            para observar si
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
@@ -1779,7 +1841,6 @@
                                                     {!! Form::submit('Deshabilitar',['class' => 'btn btn-pill btn-block btn-danger']) !!}
                                                     {!! Form::close() !!}
                                                 </div>
-
                                             @endif
                                             @if($course->mod8 == 0)
                                                 <div class="col-md-12">
@@ -1832,7 +1893,6 @@
                                                 </div>
                                             </div>
                                         @endif
-
                                     </div>
                                 </div>
                             </li>
@@ -1841,7 +1901,7 @@
                                 <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/19.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Cierre 1</h4>
+                                        <h4 class="timeline-title">Autoestima acádemica y motivación escolar</h4>
                                         @if($course->e19c1 == 0 || $course->e19c2 == 0 || $course->e19c3 == 0|| $course->e19c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1855,10 +1915,10 @@
                                                 Organización
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Organización
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Organización
                                             @endif
                                             @if($course->level == 7)
                                                 Organización
@@ -1886,10 +1946,18 @@
                                                 sesión la intervención.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces en crear ideas y
+                                                organizarse para
+                                                presentar en la próxima
+                                                sesión la intervención.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces en crear ideas y
+                                                organizarse para
+                                                presentar en la próxima
+                                                sesión la intervención.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
@@ -1951,7 +2019,7 @@
                                 <div class="timeline-badge danger" id="abc" ><a href="{{asset('workshops/'.$course->level.'/20.pdf')}}"  target="_blank" style="color: #ffffff"><i class="fa fa-file-word" style="margin-left: 17px"></i></a></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Cierre 2</h4>
+                                        <h4 class="timeline-title">Autoestima acádemica y motivación escolar</h4>
                                         @if($course->e20c1 == 0 || $course->e20c2 == 0 || $course->e20c3 == 0|| $course->e20c4 == 0)
                                             <span class="badge badge-pill badge-secondary pull-right">No evaluado</span>
                                         @else
@@ -1965,10 +2033,10 @@
                                                 Intervención
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Intervención
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Intervención
                                             @endif
                                             @if($course->level == 7)
                                                 Intervención
@@ -1983,32 +2051,38 @@
                                         <p>
                                             @if($course->level == 3)
                                                 Los alumnos deben ser
-                                                capaz en intervenir al
-                                                establecimiento sobre la
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
                                                 sana convivencia.
                                             @endif
                                             @if($course->level == 4)
                                                 Los alumnos deben ser
-                                                capaces en intervenir al
-                                                establecimiento sobre la
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
                                                 sana convivencia.
                                             @endif
                                             @if($course->level == 5)
-                                                Quinto
+                                                Los alumnos deben ser
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
+                                                sana convivencia.
                                             @endif
                                             @if($course->level == 6)
-                                                Sexto
+                                                Los alumnos deben ser
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
+                                                sana convivencia.
                                             @endif
                                             @if($course->level == 7)
                                                 Los alumnos deben ser
-                                                capaz en intervenir al
-                                                establecimiento sobre la
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
                                                 sana convivencia.
                                             @endif
                                             @if($course->level == 8)
                                                 Los alumnos deben ser
-                                                capaces en intervenir al
-                                                establecimiento sobre la
+                                                capaces de intervenir el
+                                                establecimiento educacional sobre la
                                                 sana convivencia.
                                             @endif
                                         </p>
