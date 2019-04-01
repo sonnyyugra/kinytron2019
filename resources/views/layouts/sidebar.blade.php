@@ -49,7 +49,7 @@
                 </li>
                 <li class="nav-item nav-dropdown">
                     <a class="nav-link nav-dropdown-toggle" href="#">
-                        <i class="nav-icon icon-game-controller"></i> Método</a>
+                        <i class="nav-icon icon-game-controller"></i> IDPS</a>
                     <ul class="nav-dropdown-items">
                         @foreach(Auth::user()->college->courses as $course)
                         <li class="nav-item">

@@ -61,10 +61,10 @@
             <div class="intro__content">
                 <div class="intro__title"><span>Aumenta</span> el rendimiento de tus alumnos</div>
                 <div class="intro__subtitle">Potencia tu convivencia escolar con videojuegos educativos y talleres lúdicos</div>
-                <div class="intro__description">Alineados con el curriculum del <span>MINEDUC</span> </div>
+                <div class="intro__description">Alineados con los indicadores de desarrollo personal y social de la <span>Agencia de la calidad de la educación</span> </div>
                 <div class="intro__buttons intro__buttons--centered">
                     <!-- <a href="#" class="btn btn--blue-bg modal-toggle" data-openpopup="animation">MÁS</a>  -->
-                    <a href="/demo" class="btn btn--green-bg">DEMO GRATIS</a>
+                    <a href="/demo" class="btn btn--green-bg">CONOCER MÁS</a>
                 </div>
             </div>
         </div>
@@ -130,21 +130,27 @@
         <div class="grid grid--5col grid--about">
 
             <div class="grid__item grid__item--x2">
-                <h3 class="grid__title">Contenidos teóricos con una aventura en formato <span>videojuego</span></h3>
+                <h3 class="grid__title">
+                    Metodología <span>G-Learning</span> alineada con los <span>IDPS</span> junto a los objetivos de aprendizaje que dicta el <span>MINEDUC </span>
+
+                </h3>
+
                 <p class="grid__text">
-                    Por medio de diferentes retos de creciente complejidad, los jugadores aplican el contenido teórico y gracias al videojuego reciben evaluación constante. Esto asegura la asimilación del material y por tanto el aprendizaje de la habilidad o competencia.
+                    Videojuegos que potencian el desarrollo personal y social es lo que presenta <span>KINYTRON</span> una plataforma educativa que te garantiza subir tu <span>rendimiento escolar y sana convivencia</span>
                 </p>
                 <ul class="grid__list">
-                    <li>Los juegos son una fuente de desarrollo pedagógico porque ayudan a la concentración, mejoran la comprensión y la participación.</li>
-                    <li>Los juegos también desarrollan el pensamiento creativo y la planificación.</li>
-                    <li>Mejoran la rapidez en la toma de decisiones y la atención.</li>
-                    <li>Desarrollan el pensamiento estratégico.</li>
-                    <li>Gracias a los juegos también se desarrolla la capacidad para la multitarea.</li>
-
+                    <!-- <li>Asesoramiento educacional</li> -->
+                    <!-- <li>Capacitaciones de liderazgo en docentes</li> -->
+                    <li>Promover la sana convivencia escolar con la metodología G-learning</li>
+                    <li>Fortalecer los indicadores de desarrollo personal y social a través de videojuegos y talleres lúdicos</li>
+                    <li>Aplicar TICs para mejorar la sana convivencia escolar</li>
+                    <!-- <li>Metodología de enseñanza sobre el desarrollo próximo de Reuven Feuerstein</li> -->
+                    <!-- <li>Aplicación de metacognición en cada clase de aprendizaje de manera significativa</li> -->
+                    <li>Mediciones para observar el progreso de los alumnos como curso y autoconcepto</li>
                 </ul>
 
             </div>
-            <div class="grid__item grid__item--x3">
+            <div class="grid__item grid__item--x3" >
                 <div class="grid__image grid__image--right"><img src="landing/images/kinytron.png" alt="" title="" align="center"/></div>
             </div>
         </div>
@@ -341,7 +347,6 @@
                     <div class="testimonials__text" data-swiper-parallax="-100%"><p>"Actualmente estamos ejecutando KINYTRON y nos ha parecido que es un aporte para aumentar el rendimiento académico de nuestros alumnos porque han mejorado la convivencia escolar."</p></div>
                     <div class="testimonials__source">Miguel Iriarte(Encargado Convivencia Escolar) - Colegio Sagrado Corazón Alto Hospicio</div>
                 </div>
-
             </div>
 
             <div class="testimonials__pagination swiper-pagination"></div>
@@ -466,11 +471,16 @@
 <!-- Section -->
 <section class="section section--cta" id="cta">
     <div class="section__content section__content--fix-width section__content--padding">
-        <h2 class="section__title section__title--centered section__title--cta">DEMO GRATUITO!</h2>
+        <h2 class="section__title section__title--centered section__title--cta">CONOZCÁMONOS</h2>
         <div class="section__description section__description--centered section__description--cta">
-            Creemos que nuestro servicio podría ayudarte. Por este motivo queremos darte una demostración gratuita de nuestro software educativo y que compruebes nuestra calidad.
-        </div>
-        <div class="intro__buttons intro__buttons--centered">
+            <ul class="grid__list">
+
+            <li>Asesoramiento educacional</li>
+            <li>Capacitaciones de liderazgo en docentes</li>
+            <li>Metodología de enseñanza sobre el desarrollo próximo de Reuven Feuerstein</li>
+            <li>Aplicación de metacognición en cada clase de aprendizaje de manera significativa</li>
+            </ul>
+            <br>
             <a href="/demo" class="btn btn--green-bg">SOLICITAR</a>
         </div>
     </div>
