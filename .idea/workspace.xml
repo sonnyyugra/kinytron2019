@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5096acc4-fa28-4200-95b1-6846eee1aec6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CollegeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CollegeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SuggestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SuggestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/landing/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/landing/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/plan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/plan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +32,7 @@
           <entry key="project.open.time.36" value="2" />
           <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.39" value="2" />
-          <entry key="project.open.time.40" value="3" />
+          <entry key="project.open.time.40" value="4" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.43" value="2" />
@@ -54,7 +46,7 @@
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="48" />
+          <entry key="project.opened" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,14 +54,14 @@
           <entry key="css" value="6" />
           <entry key="env" value="5" />
           <entry key="js" value="16" />
-          <entry key="php" value="506" />
+          <entry key="php" value="507" />
           <entry key="png" value="2" />
           <entry key="scss" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="157" />
+          <entry key="Blade" value="158" />
           <entry key="CSS" value="6" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="16" />
@@ -83,13 +75,13 @@
           <entry key="css" value="26" />
           <entry key="env" value="25" />
           <entry key="js" value="280" />
-          <entry key="php" value="18909" />
+          <entry key="php" value="18914" />
           <entry key="scss" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="12696" />
+          <entry key="Blade" value="12701" />
           <entry key="CSS" value="26" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="279" />
@@ -103,18 +95,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnswerController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/course/plan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="56928">
               <caret line="1779" column="44" selection-start-line="1779" selection-start-column="44" selection-end-line="1779" selection-end-column="44" />
             </state>
           </provider>
@@ -123,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="1280">
               <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
             </state>
           </provider>
@@ -132,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3168">
+            <state relative-caret-position="3712">
               <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
               <folding>
                 <element signature="e#45#81#0#PHP" expanded="true" />
@@ -144,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/measurement/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="3328">
               <caret line="104" column="66" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="66" />
             </state>
           </provider>
@@ -153,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1361">
+            <state relative-caret-position="1824">
               <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
             </state>
           </provider>
@@ -162,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="1280">
               <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
             </state>
           </provider>
@@ -175,16 +158,23 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/landing/css/swiper.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/landing/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19356" />
+            <state relative-caret-position="370">
+              <caret line="2099" column="1" lean-forward="true" selection-start-line="2099" selection-start-column="1" selection-end-line="2099" selection-end-column="1" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/landing/style.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="2094" column="18" lean-forward="true" selection-start-line="2094" selection-start-column="18" selection-end-line="2094" selection-end-column="18" />
+            <state relative-caret-position="488">
+              <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -253,7 +243,6 @@
         <option value="$PROJECT_DIR$/database/factories/AnswerFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/AnswerSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/measurement/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
@@ -261,6 +250,7 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" />
         <option value="$PROJECT_DIR$/public/landing/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php" />
       </list>
     </option>
   </component>
@@ -394,7 +384,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -482,6 +471,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,16 +561,18 @@
       <workItem from="1553787360720" duration="2090000" />
       <workItem from="1554133766433" duration="6638000" />
       <workItem from="1554383081969" duration="7489000" />
+      <workItem from="1554477246373" duration="199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345259000" />
+    <option name="totallyTimeSpent" value="345458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2758389" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27986577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -756,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -851,37 +836,30 @@
         <state relative-caret-position="-1181" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/measurement/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnswerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="66" />
+        <state relative-caret-position="1408">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/course/plan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="56928">
           <caret line="1779" column="44" selection-start-line="1779" selection-start-column="44" selection-end-line="1779" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnswerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="1280">
           <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
+        <state relative-caret-position="3712">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
           <folding>
             <element signature="e#45#81#0#PHP" expanded="true" />
@@ -889,32 +867,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/measurement/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3328">
+          <caret line="104" column="66" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1361">
+        <state relative-caret-position="1824">
           <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="1280">
           <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/landing/css/swiper.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19356" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/landing/css/reset.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/landing/css/swiper.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/landing/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="2094" column="18" lean-forward="true" selection-start-line="2094" selection-start-column="18" selection-end-line="2094" selection-end-column="18" />
+        <state relative-caret-position="370">
+          <caret line="2099" column="1" lean-forward="true" selection-start-line="2099" selection-start-column="1" selection-end-line="2099" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/measurement/autoestimaShow.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
         </state>
       </provider>
     </entry>

@@ -62,7 +62,7 @@
                                         @if( $loop->index+1 == 3 || $loop->index+1 == 5 || $loop->index+1 == 10 || $loop->index+1 == 11 || $loop->index+1 == 12 || $loop->index+1 == 14 || $loop->index+1 == 16 || $loop->index+1 == 18 || $loop->index+1 == 19)
                                             @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
                                                 <td bgcolor="red">
-                                                    Acuerdo
+                                                    De acuerdo
                                                 </td>
                                             @endif
                                             @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
