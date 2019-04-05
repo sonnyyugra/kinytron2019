@@ -606,32 +606,13 @@
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
+                                        <hr>
                                         <div class="row">
-                                            @if($course->mod2 == 1)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    <button class="btn btn-pill btn-block btn-success disabled" type="button">Habilitar</button>
-                                                    {!! Form::open(['route' => 'mod2','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod2" id="mod2" value="0">
-                                                    {!! Form::submit('Deshabilitar',['class' => 'btn btn-pill btn-block btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                                </div>
-
-                                            @endif
-                                            @if($course->mod2 == 0)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    {!! Form::open(['route' => 'mod2','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod2" id="mod2" value="1">
-                                                    {!! Form::submit('Habilitar',['class' => 'btn btn-pill btn-block btn-success']) !!}
-                                                    {!! Form::close() !!}
-                                                    <button class="btn btn-pill btn-block btn-danger disabled" type="button">Deshabilitar</button>
-
-                                                </div>
-                                            @endif
+                                            <div class="col-md-12">
+                                                <a href="{{ route('measurement.create') }}" class="btn btn-pill btn-block btn-primary">Crear una nueva medición</a>
+                                            </div>
                                         </div>
+                                        <br>
 
                                         @if($course->e6c1 == 0 || $course->e6c2 == 0 || $course->e6c3 == 0|| $course->e6c4 == 0)
                                             <div class="row">
@@ -1010,33 +991,13 @@
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
+                                        <hr>
                                         <div class="row">
-                                            @if($course->mod4 == 1)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    <button class="btn btn-pill btn-block btn-success disabled" type="button">Habilitar</button>
-                                                    {!! Form::open(['route' => 'mod4','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod4" id="mod4" value="0">
-                                                    {!! Form::submit('Deshabilitar',['class' => 'btn btn-pill btn-block btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                                </div>
-
-                                            @endif
-                                            @if($course->mod4 == 0)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    {!! Form::open(['route' => 'mod4','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod4" id="mod4" value="1">
-                                                    {!! Form::submit('Habilitar',['class' => 'btn btn-pill btn-block btn-success']) !!}
-                                                    {!! Form::close() !!}
-                                                    <button class="btn btn-pill btn-block btn-danger disabled" type="button">Deshabilitar</button>
-
-                                                </div>
-                                            @endif
+                                            <div class="col-md-12">
+                                                <a href="{{ route('measurement.create') }}" class="btn btn-pill btn-block btn-primary">Crear una nueva medición</a>
+                                            </div>
                                         </div>
-
+                                        <br>
                                         @if($course->e10c1 == 0 || $course->e10c2 == 0 || $course->e10c3 == 0|| $course->e10c4 == 0)
                                             <div class="row">
                                                 <div class="btn-group col-md-12" role="group" aria-label="First group">
@@ -1425,33 +1386,13 @@
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
+                                        <hr>
                                         <div class="row">
-                                            @if($course->mod6 == 1)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    <button class="btn btn-pill btn-block btn-success disabled" type="button">Habilitar</button>
-                                                    {!! Form::open(['route' => 'mod6','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod6" id="mod6" value="0">
-                                                    {!! Form::submit('Deshabilitar',['class' => 'btn btn-pill btn-block btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                                </div>
-
-                                            @endif
-                                            @if($course->mod6 == 0)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    {!! Form::open(['route' => 'mod6','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod6" id="mod6" value="1">
-                                                    {!! Form::submit('Habilitar',['class' => 'btn btn-pill btn-block btn-success']) !!}
-                                                    {!! Form::close() !!}
-                                                    <button class="btn btn-pill btn-block btn-danger disabled" type="button">Deshabilitar</button>
-
-                                                </div>
-                                            @endif
+                                            <div class="col-md-12">
+                                                <a href="{{ route('measurement.create') }}" class="btn btn-pill btn-block btn-primary">Crear una nueva medición</a>
+                                            </div>
                                         </div>
-
+                                        <br>
                                         @if($course->e14c1 == 0 || $course->e14c2 == 0 || $course->e14c3 == 0|| $course->e14c4 == 0)
                                             <div class="row">
                                                 <div class="btn-group col-md-12" role="group" aria-label="First group">
@@ -1830,32 +1771,13 @@
                                             han desarrollado el
                                             concepto en sí mismo.
                                         </p>
+                                        <hr>
                                         <div class="row">
-                                            @if($course->mod8 == 1)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    <button class="btn btn-pill btn-block btn-success disabled" type="button">Habilitar</button>
-                                                    {!! Form::open(['route' => 'mod8','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod8" id="mod8" value="0">
-                                                    {!! Form::submit('Deshabilitar',['class' => 'btn btn-pill btn-block btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                                </div>
-                                            @endif
-                                            @if($course->mod8 == 0)
-                                                <div class="col-md-12">
-                                                    <!-- habilitar -->
-                                                    {!! Form::open(['route' => 'mod8','style'=>'display:inline']) !!}
-                                                    <input type="hidden" name="course_id" id="course_id" value="{{$course->id}}">
-                                                    <input type="hidden" name="mod8" id="mod8" value="1">
-                                                    {!! Form::submit('Habilitar',['class' => 'btn btn-pill btn-block btn-success']) !!}
-                                                    {!! Form::close() !!}
-                                                    <button class="btn btn-pill btn-block btn-danger disabled" type="button">Deshabilitar</button>
-
-                                                </div>
-                                            @endif
+                                            <div class="col-md-12">
+                                                <a href="{{ route('measurement.create') }}" class="btn btn-pill btn-block btn-primary">Crear una nueva medición</a>
+                                            </div>
                                         </div>
-
+                                        <br>
                                         @if($course->e18c1 == 0 || $course->e18c2 == 0 || $course->e18c3 == 0|| $course->e18c4 == 0)
                                             <div class="row">
                                                 <div class="btn-group col-md-12" role="group" aria-label="First group">

@@ -17,7 +17,7 @@ class CollegeController extends Controller
     public function index()
     {
         $colleges = College::all();
-        return view('college.index',compact('colleges'));
+        return view('college.index', compact('colleges'));
     }
 
     /**
@@ -106,7 +106,7 @@ class CollegeController extends Controller
     {
         $college = College::find($id);
         $college->delete();
-        Session::flash('message','eliminar');
+        Session::flash('message', 'eliminar');
         return Redirect::to('college');
     }
 }

@@ -107,7 +107,7 @@ class MeasurementController extends Controller
 
             return view('measurement.escala',compact('measurement','chart_escala'));
         }
-        else{
+        if($measurement->exam_id == 2){
             $chart_autoestima = new Autoestima();
             $muy_bueno = 0;
             $bueno = 0;
@@ -135,7 +135,6 @@ class MeasurementController extends Controller
             $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
             return view('measurement.autoestima',compact('measurement','chart_autoestima'));
         }
-
     }
 
     /**

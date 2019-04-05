@@ -39,7 +39,6 @@
                             {!! Form::label('COLLEGE', 'Colegio') !!}
                             {{ Form::select('college_id', $colleges,null,['class' => 'form-control']) }}
                         </div>
-
                         {!! Form::submit('Agregar',['class' => 'btn btn-primary']) !!}
                         {!! Form::close() !!}
                     </div>
