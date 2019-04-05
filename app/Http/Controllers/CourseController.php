@@ -19,8 +19,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderBy('college_id','DESC')->paginate(5);
-        return view('course.index',compact('courses'));
+        $courses = Course::orderBy('college_id', 'DESC')->paginate(5);
+        return view('course.index', compact('courses'));
     }
 
     /**
@@ -30,8 +30,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $colleges = College::all()->pluck('name','id');
-        return view('course.create',compact('colleges'));
+        $colleges = College::all()->pluck('name', 'id');
+        return view('course.create', compact('colleges'));
     }
 
     /**
@@ -66,7 +66,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('course.show',compact('course'));
+        return view('course.show', compact('course'));
     }
 
     /**
@@ -77,8 +77,8 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        $colleges = College::all()->pluck('name','id');
-        return view('course.edit',compact('colleges','course'));
+        $colleges = College::all()->pluck('name', 'id');
+        return view('course.edit', compact('colleges', 'course'));
     }
 
     /**
@@ -113,95 +113,105 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         $course->delete();
-        Session::flash('message','eliminar');
+        Session::flash('message', 'eliminar');
         return Redirect::to('course');
     }
-    public function timeline(Request $request){
+    public function timeline(Request $request)
+    {
         $users = Course::find($request->id)->users->where('user_type', '3');
         $course = Course::find($request->id);
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function getCourse(Request $request){
+    public function getCourse(Request $request)
+    {
         $course = Course::find($request->course_id);
         return new CourseResource($course);
     }
-    public function mod1(Request $request){
+    public function mod1(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod1 = $request->mod1;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod2(Request $request){
+    public function mod2(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod2 = $request->mod2;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod3(Request $request){
+    public function mod3(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod3 = $request->mod3;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod4(Request $request){
+    public function mod4(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod4 = $request->mod4;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod5(Request $request){
+    public function mod5(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod5 = $request->mod5;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod6(Request $request){
+    public function mod6(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod6 = $request->mod6;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod7(Request $request){
+    public function mod7(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod7 = $request->mod7;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function mod8(Request $request){
+    public function mod8(Request $request)
+    {
         $users = Course::find($request->course_id)->users->where('user_type', '3');
         $course = Course::find($request->course_id);
         $course->mod8 = $request->mod8;
         $course->save();
         Session::flash('message', 'editar');
-        return view('course.plan',compact('course','users'));
+        return view('course.plan', compact('course', 'users'));
     }
-    public function changeMod(Request $request){
-        $users = Course::find($request->course_id)->users->where('user_type',3);
+    public function changeMod(Request $request)
+    {
+        $users = Course::find($request->course_id)->users->where('user_type', 3);
         $value = $request->changeMod;
-        foreach ($users as $user){
+        foreach ($users as $user) {
             $user->mod0 = $value;
             $user->save();
         }
         $id = $request->course_id;
         Session::flash('message', 'editar');
         return redirect()->action(
-            'CourseController@timeline', ['id' => $id]
+            'CourseController@timeline',
+            ['id' => $id]
         );
-
-
     }
 }

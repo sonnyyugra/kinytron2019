@@ -35,6 +35,18 @@ class DatabaseSeeder extends Seeder
         DB::table('exams')->insert([
             'name' => 'AUTOESTIMA',
         ]);
+        DB::table('exams')->insert([
+            'name' => 'TRABAJO EN EQUIPO',
+        ]);
+        DB::table('exams')->insert([
+            'name' => 'COMUNICACION ASERTIVA',
+        ]);
+        DB::table('exams')->insert([
+            'name' => 'EMPATIA',
+        ]);
+        DB::table('exams')->insert([
+            'name' => 'DISCIPLINA',
+        ]);
         DB::table('measurements')->insert([
             'user_id' => 2,
             'exam_id' => 1,

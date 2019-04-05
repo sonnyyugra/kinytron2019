@@ -13,7 +13,7 @@ class SuggestionController extends Controller
     public function index()
     {
         $suggestions = Suggestion::all();
-        return view('suggestion.index',compact('suggestions'));
+        return view('suggestion.index', compact(' suggestions '));
     }
 
     /**
@@ -51,14 +51,14 @@ class SuggestionController extends Controller
     public function destroy(Suggestion $suggestion)
     {
         $suggestion->delete();
-        Session::flash('message','eliminar');
+        Session::flash('message', 'eliminar');
         //Alert::error('GG!', 'Eliminado!');
 
         return redirect('/indexsug');
     }
 
-    public function show(Suggestion $suggestion){
-        return view('suggestion.show',compact('suggestion'));
+    public function show(Suggestion $suggestion)
+    {
+        return view('suggestion.show', compact('suggestion'));
     }
-
 }
