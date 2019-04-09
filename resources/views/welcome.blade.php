@@ -519,7 +519,7 @@
     </div>
 
     <svg class="svg-cta-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon fill="#698bd6" points="0,100 100,0 0,0"/>
+        <polygon fill="#6DC568" points="0,100 100,0 0,0"/>
     </svg>
 </footer>
 
