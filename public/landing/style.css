@@ -35,7 +35,7 @@ Template:	LATERAL | Landing page templates for SAAS companies
 9. MEDIA QUERIES
 */
 /*===============================================*/
-/* 1. RESET		 		color:#698bd6;				 */
+/* 1. RESET		 		color:#6DC568;				 */
 /*===============================================*/
 @import "css/reset.css";
 /*===============================================*/
@@ -65,7 +65,7 @@ p{
 }
 a{
 	text-decoration:none;
-	color:#698bd6;
+	color:#6DC568;
 }
 blockquote{
 	font-style:italic;
@@ -261,10 +261,10 @@ h6{
 	border:1px #40bd9a solid;
 }
 .header__menu > ul > li.header__btn--login > a {
-	color:#698bd6;
+	color:#6DC568;
 	padding:0 22px; 
 	margin:19px 0 0 25px;
-	border:1px #698bd6 solid;
+	border:1px #6DC568 solid;
 }
 .header__menu ul li.header__btn--signup > a:hover{
 	background-color:#fff; 
@@ -272,17 +272,17 @@ h6{
 	color:#40bd9a;
 }
 .header__menu ul li.header__btn--login > a:hover{
-	background-color:#698bd6;
+	background-color:#6DC568;
 	color:#fff;
 }
 .header__menu ul li  a:hover, .header__menu ul li a.selected , .header__menu ul li a.active{
-	color: #698bd6;
+	color: #6DC568;
 }
 .header__menu ul li.header__btn--signup a.active { 
 	color:#fff; 
 }
 .header__menu ul li.header__btn--login a.active {
-	color:#698bd6;
+	color:#6DC568;
 }
 .header__menu ul li:hover{
 	cursor:pointer;
@@ -340,7 +340,7 @@ h6{
   font-size:14px;
   line-height:45px; height:45px;
 }
-.header__menu ul ul li a:hover{ color: #698bd6; }
+.header__menu ul ul li a:hover{ color: #6DC568; }
 .header__menu ul ul li:last-child a {
  border-bottom:none; 
  }
@@ -692,19 +692,19 @@ h6{
  }
 .btn--blue-bg{
 	color:#fff;
-	background-color:#698bd6;
-	border:2px #698bd6 solid;
+	background-color:#6DC568;
+	border:2px #6DC568 solid;
 }
 .btn--blue-bg:hover{
 	background:none;
-	color:#698bd6;
+	color:#6DC568;
 }
 .btn--blue-border{ 
-	color:#698bd6;
-	border:1px #698bd6 solid;
+	color:#6DC568;
+	border:1px #6DC568 solid;
 }
 .btn--blue-border:hover{ 
-	background-color:#698bd6;
+	background-color:#6DC568;
 	color:#fff;
 }
 .btn--green-bg{
@@ -786,7 +786,7 @@ h6{
 }
 .intro__description span{
 	font-weight:700;
-	color:#698bd6;
+	color:#6DC568;
 }
 .intro__buttons{
 	padding:20px 0 0 0;
@@ -960,7 +960,7 @@ svg.svg-features-bottom {
 	font-size:16px;
 }
 .testimonials__source a{
-	color:#698bd6;
+	color:#6DC568;
 	padding:0 20px;
 	position:relative;
 	-webkit-transition: all 0.5s;
@@ -992,12 +992,12 @@ svg.svg-features-bottom {
     height: 10px;
     display: inline-block;
     border-radius: 100%;
-    background: #698bd6;
+    background: #6DC568;
     opacity: 0.2;
 }
 .testimonials__pagination .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #698bd6;
+    background: #6DC568;
 }
 
 /*===============================================*/
@@ -1036,7 +1036,7 @@ svg.svg-features-bottom {
 .switcher__border{
 	height: 40px;
 	width: 50%;
-	background-color:#698bd6;
+	background-color:#6DC568;
 	display:block;
 	position:absolute;
 	top:0px;
@@ -1075,7 +1075,7 @@ svg.svg-features-bottom {
 	z-index: 2;
 	top: -30px;
 	padding:50px 0 70px 0;
-	background-color:#698bd6;
+	background-color:#6DC568;
 	color:#fff;
 	-moz-box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .45), -10px 0 15px -10px rgba(0, 0, 0, .45);
 	-webkit-box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .45), -10px 0 15px -10px rgba(0, 0, 0, .45);
@@ -1261,13 +1261,13 @@ svg.svg-features-bottom {
 	-moz-transition: background-color 0.3s ease;
 	transition: background-color 0.3s ease; 
 	background:none;
-	color:#698bd6;
-	border:2px #698bd6 solid;
+	color:#6DC568;
+	border:2px #6DC568 solid;
 }
 .pricing__signup:hover{
 	color:#fff;
-	background-color:#698bd6;
-	border:2px #698bd6 solid;
+	background-color:#6DC568;
+	border:2px #6DC568 solid;
  }
 .pricing__plan--popular .pricing__signup{
 	color:#fff;
@@ -1284,7 +1284,7 @@ svg.svg-features-bottom {
 /*===============================================*/
  
 .section--cta{
-	background-color:#698bd6;
+	background-color:#6DC568;
 	position:relative;
 	color:#fff;
 	padding-top:80px;
@@ -1366,7 +1366,7 @@ svg.svg-cta-bottom {
     margin: auto;
     width: 50%;
     height: 4px;
-    background: #698bd6;
+    background: #6DC568;
 }
 .hiw-content__slide{
 	background-color: #ecf9f5;
@@ -1416,7 +1416,7 @@ svg.svg-cta-bottom {
     margin:0;
     width:40px;
     height:1px;
-    background:#698bd6;
+    background:#6DC568;
 	opacity:.5;
 	-webkit-transition: all .5s ease-out;
 	-moz-transition: all .5s ease-out;
@@ -1436,7 +1436,7 @@ svg.svg-cta-bottom {
 .grid--support .grid__more{
 	height: 32px;
 	line-height: 30px;
-	color:#698bd6;
+	color:#6DC568;
 	background:none;
 	padding: 0 22px;
 	margin:0px 0 0 0;
@@ -1450,13 +1450,13 @@ svg.svg-cta-bottom {
 }
 .grid--support .grid__more:hover{
 	color: #fff;
-	background-color: #698bd6;
-	border: 1px #698bd6 solid;
+	background-color: #6DC568;
+	border: 1px #6DC568 solid;
 }
 .grid--support .grid__item:hover .grid__more{
 	color: #fff;
-	background-color: #698bd6;
-	border: 1px #698bd6 solid;
+	background-color: #6DC568;
+	border: 1px #6DC568 solid;
 }
  /*===============================================*/
 /*  7.9 CUSTOM SECTION - CLIENTS 			 */
@@ -1477,7 +1477,7 @@ svg.svg-cta-bottom {
 /*  7.10 CUSTOM SECTION - CONTACT	 			 */
 /*===============================================*/
 .grid--contact{
-	background-color:#698bd6;
+	background-color:#6DC568;
 	color:#fff;
 	display: flex;
 }
@@ -1644,7 +1644,7 @@ svg.svg-cta-bottom {
 	transition: transform 0.3s;
 }
 .input__label--effect-color-1::after {
-	border-color: #698bd6;
+	border-color: #6DC568;
 }
 .input__field--effect:focus + .input__label--effect::after,
 .input--filled .input__label--effect::after {
@@ -1656,7 +1656,7 @@ svg.svg-cta-bottom {
 .input--filled .input__label-content--effect {
 	-webkit-animation: anim-input 0.3s forwards;
 	animation: anim-input 0.3s forwards;
-	color:#698bd6;
+	color:#6DC568;
 	font-weight:400;
 }
 @-webkit-keyframes anim-input {
@@ -1757,7 +1757,7 @@ transition: all 0.3s 0.12s;
 }
 .modal__header{
   width:96%;
-  background-color:#698bd6;
+  background-color:#6DC568;
   color:#fff;
   font-size:20px;
   font-weight:300;
@@ -1802,10 +1802,10 @@ transition: all 0.3s 0.12s;
 	margin:auto;
 }
 .modal__content--login{
-  background-color:#698bd6;
+  background-color:#6DC568;
 }
 .modal__content--forgot{
-  background-color:#698bd6;
+  background-color:#6DC568;
 }
 .modal__content--signup{
   background-color:#40bd9a;
@@ -1887,9 +1887,9 @@ transition: all 0.3s 0.12s;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-	color: #698bd6;
+	color: #6DC568;
 	background-color:transparent;
-	border: 2px #698bd6 solid;
+	border: 2px #6DC568 solid;
 	cursor:pointer;
 	font-weight:700;
 }
@@ -1934,14 +1934,14 @@ transition: all 0.3s 0.12s;
 	border:none;
 	background-color:#ecf9f5;
 }
-.modal__checkbox input[type="checkbox"]:checked + label:before {color: #fff;content: "\2713";border:none;	text-align: center;background-color:#698bd6; }
+.modal__checkbox input[type="checkbox"]:checked + label:before {color: #fff;content: "\2713";border:none;	text-align: center;background-color:#6DC568; }
 .modal__checkbox input[type="checkbox"]:checked + label:after {font-weight: bold;}
 .modal__checkbox input[type="checkbox"] + label:before, input[type="checkbox"]:checked + label:before{background-color:#ecf9f5;}
 
 .modal__switch--forgot{
 	float:right;
 	padding:10px 0 0 0;
-	color:#698bd6;
+	color:#6DC568;
 	font-weight:700;
 	cursor:pointer;
     -webkit-transition: all 0.3s ease;
@@ -2110,7 +2110,7 @@ ul.grid__list--fmenu li a::after {
     display: block;
     width: 0;
     height: 1px;
-    background: #698bd6;
+    background: #6DC568;
     transition: width .3s;
 }
 
@@ -2118,7 +2118,7 @@ ul.grid__list--fmenu li a:hover::after {
     width: 100%;
 }
 ul.grid__list--fmenu li a:hover {
-	color: #698bd6;
+	color: #6DC568;
 }
 /*===============================================*/
 /* 9. MEDIA QUERIES   			 */
