@@ -5,8 +5,10 @@ namespace Kinytron\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Kinytron\Charts\Autoestima;
 use Kinytron\Charts\Clima;
+use Kinytron\Charts\ComunicacionAsertiva;
 use Kinytron\Charts\IndAutoestima;
 use Kinytron\Charts\IndClima;
+use Kinytron\Charts\IndComunicacionAsertiva;
 use Kinytron\Charts\IndividualClima;
 use Kinytron\Charts\IndTrabajoEnEquipo;
 use Kinytron\Charts\TrabajoEnEquipo;
@@ -159,89 +161,27 @@ class MeasurementController extends Controller
             return view('measurement.trabajo_en_equipo',compact('measurement','chart_TrabajoEnEquipo'));
         }
         if($measurement->exam_id == 4){
-            $chart_autoestima = new Autoestima();
+            $chart_ComunicacionAsertiva = new ComunicacionAsertiva();
             $muy_bueno = 0;
-            $bueno = 0;
             $regular = 0;
             $insuficiente = 0;
-            $deficiente = 0;
             foreach ($measurement->course->users as $user){
                 $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
-                if($score >= 20 && $score <=27){
-                    $deficiente++;
-                }
-                if($score >= 28 && $score <=36){
+
+                if($score >= 7 && $score <=11){
                     $insuficiente++;
                 }
-                if($score >= 37 && $score <=45){
+                if($score >= 12 && $score <=16){
                     $regular++;
                 }
-                if($score >= 46 && $score <=54){
-                    $bueno++;
-                }
-                if($score >= 55 && $score <=60){
+                if($score >= 17 && $score <=21){
                     $muy_bueno++;
                 }
             }
-            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
-            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
+            $chart_ComunicacionAsertiva->displayAxes(false)->dataset('Sample', 'doughnut', [$insuficiente,$regular,$muy_bueno])->BackgroundColor(['red','yellow','green']);;
+            return view('measurement.comunicacion_asertiva',compact('measurement','chart_ComunicacionAsertiva'));
         }
-        if($measurement->exam_id == 5){
-            $chart_autoestima = new Autoestima();
-            $muy_bueno = 0;
-            $bueno = 0;
-            $regular = 0;
-            $insuficiente = 0;
-            $deficiente = 0;
-            foreach ($measurement->course->users as $user){
-                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
-                if($score >= 20 && $score <=27){
-                    $deficiente++;
-                }
-                if($score >= 28 && $score <=36){
-                    $insuficiente++;
-                }
-                if($score >= 37 && $score <=45){
-                    $regular++;
-                }
-                if($score >= 46 && $score <=54){
-                    $bueno++;
-                }
-                if($score >= 55 && $score <=60){
-                    $muy_bueno++;
-                }
-            }
-            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
-            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
-        }
-        if($measurement->exam_id == 6){
-            $chart_autoestima = new Autoestima();
-            $muy_bueno = 0;
-            $bueno = 0;
-            $regular = 0;
-            $insuficiente = 0;
-            $deficiente = 0;
-            foreach ($measurement->course->users as $user){
-                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
-                if($score >= 20 && $score <=27){
-                    $deficiente++;
-                }
-                if($score >= 28 && $score <=36){
-                    $insuficiente++;
-                }
-                if($score >= 37 && $score <=45){
-                    $regular++;
-                }
-                if($score >= 46 && $score <=54){
-                    $bueno++;
-                }
-                if($score >= 55 && $score <=60){
-                    $muy_bueno++;
-                }
-            }
-            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
-            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
-        }
+
 
 
     }
@@ -437,5 +377,57 @@ class MeasurementController extends Controller
         $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['green','yellow','red']);
         return view('measurement.trabajoShow',compact('medicion','usuario','preguntas','individual'));
     }
+    public function comunicacion($measurement,$user){
+        $individual = new IndComunicacionAsertiva();
+        $si = 0; // SI
+        $a_veces = 0; // A veces
+        $no = 0; // No
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $no++;
+            }
+            if($answer->answer == 2){
+                $a_veces++;
+            }
+            if($answer->answer == 3){
+                $si++;
+            }
+        }
+        $preguntas = collect([
+            "¿Escucho activamente a mis compañeros(as) cuando me hablan?",
+            "¿Hablas de temas que tu otro(a) compañero(a) le gusta?",
+            "¿Existe una buena comunicación entre yo y mis compañeros(as)?",
+            "¿Existe una buena comunicación entre yo y mi profesor(a)?",
+            "¿Los profesores toman en cuenta mi opinión?",
+            "¿Mis compañeros toman en cuenta mi opinión?",
+            "¿Se faltan el respeto entre mis compañeros(as)?",
+            "¿Existe modalidad de turnos para la conversación en el curso?",
+            "¿Existe respeto de turno, a la hora de conversar?",
+            "¿Trato de llegar a una solución a través de una conversación tranquila?",
+            "¿Cuándo alguien es injusto, usted le dice algo?",
+            "¿Siempre tratas de no tener problemas con nadie?",
+            "¿Tratas de no decir tu opinión frente a tus compañeros(as) o profesores?",
+            "¿Te gusta participar en clases en decir lo que aprendiste?",
+            "¿Siempre te quedas callado cuando tienes dudas?",
+            "¿Cuánto te pasa algo malo, frecuentemente le cuentas a tus padres?",
+            "¿Cuándo te sientes en peligro, dudas en contarle a alguien?",
+            "¿Prefiere quedarte callado antes de meterse en problema?",
+            "¿Sí alguien lo está amenazando, usted le dice a alguien?",
+            "¿Consideras que cada compañero(a) tiene derecho de decir su opinión?",
+            "¿Consideras que cada compañero(a) tiene derecho de respetar su opinión?",
+            "¿Cuándo te sientes incomodo con alguien, tratar de decirle a alguien?",
+            "Si alguien, te dice: “No digas nada”, ¿Te quedas callado?",
+            "¿Sí todos los días alguien te empieza molestar, tú te quedas callado?",
+            "¿Tienes problemas en expresar su enojo?",
+            "¿Tratas de decir tus molestias de una forma asertiva?",
+            "¿Me cuesta pedir disculpa, cuando cometo un error?",
+            "¿Por lo general trato de controlarme, cuando estoy enojado(a)?",
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['green','yellow','red']);
+        return view('measurement.comunicacionShow',compact('medicion','usuario','preguntas','individual'));
+    }
+
 
 }
