@@ -18,10 +18,18 @@ $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncr
 
     //AUTOESTIMA
 
+//    return [
+//        'answer' => $faker->numberBetween(1,3),
+//        'question_number' => $autoIncrement->current(),
+//        'measurement_id' => 2,
+//    ];
+
+    //TRABAJO EN EQUIPO
+
     return [
         'answer' => $faker->numberBetween(1,3),
         'question_number' => $autoIncrement->current(),
-        'measurement_id' => 2,
+        'measurement_id' => 3,
     ];
 
 });
@@ -40,12 +48,19 @@ function autoIncrement()
 
     //AUTOESTIMA
 
-    for ($i = 0; $i < 21; $i++) {
-    yield $i;
-    if($i==20){
-    $i = 0;
-    }
-    }
+//    for ($i = 0; $i < 21; $i++) {
+//    yield $i;
+//    if($i==20){
+//    $i = 0;
+//    }
+//    }
 
+    //TRABAJO EN EQUIPO
 
+    for ($i = 0; $i < 8; $i++) {
+        yield $i;
+        if($i==7){
+            $i = 0;
+        }
+    }
 }

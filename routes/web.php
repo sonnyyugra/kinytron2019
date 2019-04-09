@@ -71,6 +71,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('measurement/inactive/{measurement}','MeasurementController@inactive')->name('measurement.inactive');
     Route::get('measurement/escala/{measurement}/{user}','MeasurementController@escala')->name('measurement.escala');
     Route::get('measurement/autoestima/{measurement}/{user}','MeasurementController@autoestima')->name('measurement.autoestima');
+    Route::get('measurement/trabajo/{measurement}/{user}','MeasurementController@trabajo')->name('measurement.trabajo');
+    Route::get('measurement/empatia/{measurement}/{user}','MeasurementController@empatia')->name('measurement.empatia');
+    Route::get('measurement/comunicacion/{measurement}/{user}','MeasurementController@comunicacion')->name('measurement.comunicacion');
+    Route::get('measurement/disciplina/{measurement}/{user}','MeasurementController@disciplina')->name('measurement.disciplina');
+
+
+
+
 });
 Route::get('demo',function (){
     return view('auth.register');
