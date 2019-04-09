@@ -8,6 +8,8 @@ use Kinytron\Charts\Clima;
 use Kinytron\Charts\IndAutoestima;
 use Kinytron\Charts\IndClima;
 use Kinytron\Charts\IndividualClima;
+use Kinytron\Charts\IndTrabajoEnEquipo;
+use Kinytron\Charts\TrabajoEnEquipo;
 use Kinytron\Exam;
 use Kinytron\Http\Resources\Course;
 use Kinytron\Http\Resources\User;
@@ -135,6 +137,113 @@ class MeasurementController extends Controller
             $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
             return view('measurement.autoestima',compact('measurement','chart_autoestima'));
         }
+        if($measurement->exam_id == 3){
+            $chart_TrabajoEnEquipo = new TrabajoEnEquipo();
+            $muy_bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+
+                if($score >= 7 && $score <=11){
+                    $insuficiente++;
+                }
+                if($score >= 12 && $score <=16){
+                    $regular++;
+                }
+                if($score >= 17 && $score <=21){
+                    $muy_bueno++;
+                }
+            }
+            $chart_TrabajoEnEquipo->displayAxes(false)->dataset('Sample', 'doughnut', [$insuficiente,$regular,$muy_bueno])->BackgroundColor(['red','yellow','green']);;
+            return view('measurement.trabajo_en_equipo',compact('measurement','chart_TrabajoEnEquipo'));
+        }
+        if($measurement->exam_id == 4){
+            $chart_autoestima = new Autoestima();
+            $muy_bueno = 0;
+            $bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            $deficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 20 && $score <=27){
+                    $deficiente++;
+                }
+                if($score >= 28 && $score <=36){
+                    $insuficiente++;
+                }
+                if($score >= 37 && $score <=45){
+                    $regular++;
+                }
+                if($score >= 46 && $score <=54){
+                    $bueno++;
+                }
+                if($score >= 55 && $score <=60){
+                    $muy_bueno++;
+                }
+            }
+            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
+            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
+        }
+        if($measurement->exam_id == 5){
+            $chart_autoestima = new Autoestima();
+            $muy_bueno = 0;
+            $bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            $deficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 20 && $score <=27){
+                    $deficiente++;
+                }
+                if($score >= 28 && $score <=36){
+                    $insuficiente++;
+                }
+                if($score >= 37 && $score <=45){
+                    $regular++;
+                }
+                if($score >= 46 && $score <=54){
+                    $bueno++;
+                }
+                if($score >= 55 && $score <=60){
+                    $muy_bueno++;
+                }
+            }
+            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
+            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
+        }
+        if($measurement->exam_id == 6){
+            $chart_autoestima = new Autoestima();
+            $muy_bueno = 0;
+            $bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            $deficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 20 && $score <=27){
+                    $deficiente++;
+                }
+                if($score >= 28 && $score <=36){
+                    $insuficiente++;
+                }
+                if($score >= 37 && $score <=45){
+                    $regular++;
+                }
+                if($score >= 46 && $score <=54){
+                    $bueno++;
+                }
+                if($score >= 55 && $score <=60){
+                    $muy_bueno++;
+                }
+            }
+            $chart_autoestima->displayAxes(false)->dataset('Sample', 'doughnut', [$deficiente,$insuficiente,$regular,$bueno,$muy_bueno])->BackgroundColor(['red','orange','yellow','blue','green']);;
+            return view('measurement.autoestima',compact('measurement','chart_autoestima'));
+        }
+
+
     }
 
     /**
@@ -277,4 +386,56 @@ class MeasurementController extends Controller
         $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$acuerdo,$nose,$desacuerdo])->BackgroundColor(['green','yellow','red']);
         return view('measurement.autoestimaShow',compact('medicion','usuario','preguntas','individual'));
     }
+    public function trabajo($measurement,$user){
+        $individual = new IndTrabajoEnEquipo();
+        $si = 0; // SI
+        $a_veces = 0; // A veces
+        $no = 0; // No
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $no++;
+            }
+            if($answer->answer == 2){
+                $a_veces++;
+            }
+            if($answer->answer == 3){
+                $si++;
+            }
+        }
+        $preguntas = collect([
+            "¿Prefieres trabajar con tus compañeros(as)?",
+            "¿Te gusta trabajar con compañeros(as) para lograr en realizar la tarea en conjunta?",
+            "¿Te gusta trabajar con compañeros(as) y ser comprometidos en realizar la tarea?",
+            "¿Al momento de trabajar con compañeros(as), se distribuyen tareas para agilizar el proceso?",
+            "¿Cuándo hay diferentes opiniones, se llega a consenso para tomar decisiones?",
+            "¿Cuándo trabajas con tus compañeros(as) existe confianza?",
+            "¿Cuándo trabajas con tus compañeros(as) existe apoyo mutuo?",
+            "¿Eres tolerante con las demás opiniones que no estás de acuerdo?",
+            "¿Cuándo te designa una tarea por parte de tus compañeros(as), la cumples a tiempo?",
+            "¿Cuándo algunos de tus integrantes de tu equipo necesitan ayuda, tú le brindas apoyo?",
+            "¿Eres capaz de reconocer y operar en los conflictos, para lograr un acuerdo mutuo?",
+            "¿Me siento cómodo en trabajar en equipo?",
+            "¿Acepto las críticas de mis compañeros(as)?",
+            "¿Por lo general nos distribuimos los materiales para que cada uno traiga algo?",
+            "¿Las clases son más entretenidas cuando se trabaja en grupos?",
+            "¿Aprendo más compartiendo mis aprendizajes con los demás compañeros(as)?",
+            "¿Existe compañeros(as) que no le gusta trabajar en grupo?",
+            "¿Existe compañeros(as) que no le gusta cooperar?",
+            "¿Te gustaría que los grupos de trabajo fueran al azar?",
+            "¿Crees que sirve de algo trabajar en grupo con diferentes compañeros(as)?",
+            "¿Crees que trabajar en grupo te ayudará en el futuro?",
+            "¿Permanezco sentado hasta que todos hayan tenido su grupo de trabajo?",
+            "¿Me gusta tener iniciativa para reintegrarme en un grupo?",
+            "¿Me siento motivado en lograr en cumplir el trabajo en grupo?",
+            "¿Son divertidos los trabajos en grupos que se realizan en clases?",
+            "¿Mi profesor(a) realizan muchos trabajos en grupos dentro de clases?",
+            "¿A la hora de presentar el trabajo o presentación, cada uno cooperó?",
+            "¿Crees que con trabajar en grupo desarrollaras habilidades sociales?",
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['green','yellow','red']);
+        return view('measurement.trabajoShow',compact('medicion','usuario','preguntas','individual'));
+    }
+
 }

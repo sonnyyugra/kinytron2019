@@ -63,6 +63,14 @@ class DatabaseSeeder extends Seeder
             'active' => 1,
             'created_at' => date("Y-m-d H:i:s")
         ]);
+        DB::table('measurements')->insert([
+            'user_id' => 2,
+            'exam_id' => 3,
+            'course_id' => 1,
+            'college_id' => 1,
+            'active' => 1,
+            'created_at' => date("Y-m-d H:i:s")
+        ]);
         $this->call(AnswerSeeder::class);
 
         //medallas
