@@ -4,19 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" line="279" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5096acc4-fa28-4200-95b1-6846eee1aec6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Charts/IndComunicacionAsertiva.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts/IndComunicacionAsertiva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Charts/IndDisciplina.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts/IndDisciplina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Charts/IndEmpatia.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts/IndEmpatia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Charts/IndTrabajoEnEquipo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts/IndTrabajoEnEquipo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MeasurementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/measurement/comunicacionShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/comunicacionShow.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/measurement/disciplina.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/disciplina.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/measurement/disciplinaShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/disciplinaShow.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/measurement/empatia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/empatia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/measurement/empatiaShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/measurement/empatiaShow.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="5096acc4-fa28-4200-95b1-6846eee1aec6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/measurement/disciplinaShow.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="45" column="54" lean-forward="true" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+            <state relative-caret-position="448">
+              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -562,12 +550,12 @@
       <workItem from="1554383081969" duration="7489000" />
       <workItem from="1554477246373" duration="657000" />
       <workItem from="1554734806563" duration="24614000" />
-      <workItem from="1554902537865" duration="2785000" />
+      <workItem from="1554902537865" duration="3978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373315000" />
+    <option name="totallyTimeSpent" value="374508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -977,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/measurement/disciplinaShow.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="45" column="54" lean-forward="true" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+        <state relative-caret-position="448">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
         </state>
       </provider>
     </entry>
