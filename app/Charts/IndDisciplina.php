@@ -14,5 +14,12 @@ class IndDisciplina extends Chart
     public function __construct()
     {
         parent::__construct();
+        $this->labels(['NO', 'A VECES', 'SI'])
+            ->options([
+                'responsive' => true,
+                'animation' => [
+                    'duration' => 3000,
+                ],
+            ]);
     }
 }
