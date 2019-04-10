@@ -6,9 +6,13 @@ use Illuminate\Support\Facades\Auth;
 use Kinytron\Charts\Autoestima;
 use Kinytron\Charts\Clima;
 use Kinytron\Charts\ComunicacionAsertiva;
+use Kinytron\Charts\Disciplina;
+use Kinytron\Charts\Empatia;
 use Kinytron\Charts\IndAutoestima;
 use Kinytron\Charts\IndClima;
 use Kinytron\Charts\IndComunicacionAsertiva;
+use Kinytron\Charts\IndDisciplina;
+use Kinytron\Charts\IndEmpatia;
 use Kinytron\Charts\IndividualClima;
 use Kinytron\Charts\IndTrabajoEnEquipo;
 use Kinytron\Charts\TrabajoEnEquipo;
@@ -181,6 +185,48 @@ class MeasurementController extends Controller
             $chart_ComunicacionAsertiva->displayAxes(false)->dataset('Sample', 'doughnut', [$insuficiente,$regular,$muy_bueno])->BackgroundColor(['red','yellow','green']);;
             return view('measurement.comunicacion_asertiva',compact('measurement','chart_ComunicacionAsertiva'));
         }
+        if($measurement->exam_id == 5){
+            $chart_Empatia = new Empatia();
+            $muy_bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 7 && $score <=11){
+                    $insuficiente++;
+                }
+                if($score >= 12 && $score <=16){
+                    $regular++;
+                }
+                if($score >= 17 && $score <=21){
+                    $muy_bueno++;
+                }
+            }
+            $chart_Empatia->displayAxes(false)->dataset('Sample', 'doughnut', [$insuficiente,$regular,$muy_bueno])->BackgroundColor(['red','yellow','green']);;
+            return view('measurement.empatia',compact('measurement','chart_Empatia'));
+        }
+        if($measurement->exam_id == 6){
+            $chart_Disciplina = new Disciplina();
+            $muy_bueno = 0;
+            $regular = 0;
+            $insuficiente = 0;
+            foreach ($measurement->course->users as $user){
+                $score = $user->answers->where('measurement_id',$measurement->id)->sum('answer');
+                if($score >= 7 && $score <=11){
+                    $insuficiente++;
+                }
+                if($score >= 12 && $score <=16){
+                    $regular++;
+                }
+                if($score >= 17 && $score <=21){
+                    $muy_bueno++;
+                }
+            }
+            $chart_Disciplina->displayAxes(false)->dataset('Sample', 'doughnut', [$insuficiente,$regular,$muy_bueno])->BackgroundColor(['red','yellow','green']);;
+            return view('measurement.disciplina',compact('measurement','chart_Disciplina'));
+        }
+
+
 
 
 
@@ -374,7 +420,7 @@ class MeasurementController extends Controller
             "¿A la hora de presentar el trabajo o presentación, cada uno cooperó?",
             "¿Crees que con trabajar en grupo desarrollaras habilidades sociales?",
         ]);
-        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['green','yellow','red']);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['red','yellow','green']);
         return view('measurement.trabajoShow',compact('medicion','usuario','preguntas','individual'));
     }
     public function comunicacion($measurement,$user){
@@ -425,9 +471,110 @@ class MeasurementController extends Controller
             "¿Me cuesta pedir disculpa, cuando cometo un error?",
             "¿Por lo general trato de controlarme, cuando estoy enojado(a)?",
         ]);
-        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['green','yellow','red']);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['red','yellow','green']);
         return view('measurement.comunicacionShow',compact('medicion','usuario','preguntas','individual'));
     }
-
+    public function empatia($measurement,$user){
+        $individual = new IndEmpatia();
+        $si = 0; // SI
+        $a_veces = 0; // A veces
+        $no = 0; // No
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $no++;
+            }
+            if($answer->answer == 2){
+                $a_veces++;
+            }
+            if($answer->answer == 3){
+                $si++;
+            }
+        }
+        $preguntas = collect([
+            "¿Entiendo cómo se siente mi compañero(a)?",
+            "¿Cuándo veo algún compañero(a) que se siente mal, le pregunto?",
+            "¿Le busco una solución a mi compañero(a) cuando lo veo mal?",
+            "¿Dejas que algún compañero(a) expresa lo que siente?",
+            "¿Eres capaz de sentir lo mismo que siente tu compañero(a)?",
+            "¿Mis compañeros toman en cuenta mi opinión?",
+            "¿Por lo general, mis compañeros(as) se ríen de lo que expresa los demás?",
+            "¿Sí veo que alguien le molesta algo, trato de avisar a los demás??",
+            "¿Sí ves que algún compañero(a) no le gusta tu conducta, paras de hacerlo?",
+            "¿Eres de esas personas que no oyes a las personas?",
+            "¿Eres de esas personas que finge que estas oyendo a la persona?",
+            "¿Siempre tratas de no tener problemas con nadie?",
+            "¿Tratas de decir tu opinión frente a tus compañeros(as) o profesores?",
+            "¿Sueles ayudar a los demás a satisfacer sus deseos?",
+            "¿Siempre te quedas callado, cuando ves alguna situación que no corresponde?",
+            "¿Imagino la escena cuando alguien me cuenta algún problema?",
+            "¿Me cuesta conectarme con los sentimientos de mi compañero(a)?",
+            "¿Me hago una ligera idea de cómo se debe sentir mi compañero(a)?",
+            "¿Sí alguien lo está amenazando, usted le dice a alguien?",
+            "¿Me fijo en cómo lo dice y en que tono lo dice?",
+            "¿Le haces pregunta a tu compañero(a) cuando tienes duda?",
+            "¿Respetas la opinión de tu compañero(a)?",
+            "¿Te poner en el lugar de los demás?",
+            "¿Te preocupas las consecuencias que traerías de tus acciones?",
+            "¿Tienes problemas en comprender las situaciones de los demás?",
+            "¿Tratas subir el animo a tu compañero(a)?",
+            "¿Sí alguien me dice algo positivo, se lo agradezco?",
+            "¿Mi compañero(a) me cuenta una tontería por lo que se siente triste, lo respeto?",
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['red','yellow','green']);
+        return view('measurement.empatiaShow',compact('medicion','usuario','preguntas','individual'));
+    }
+    public function disciplina($measurement,$user){
+        $individual = new IndDisciplina();
+        $si = 0; // SI
+        $a_veces = 0; // A veces
+        $no = 0; // No
+        $medicion = Measurement::find($measurement);
+        $usuario = \Kinytron\User::find($user);
+        foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
+            if($answer->answer == 1){
+                $no++;
+            }
+            if($answer->answer == 2){
+                $a_veces++;
+            }
+            if($answer->answer == 3){
+                $si++;
+            }
+        }
+        $preguntas = collect([
+            "¿Me preocupo de mis tareas de colegio?",
+            "¿Me preocupo de mis tareas de la casa?",
+            "¿Hago mis tareas del colegio con anticipación?",
+            "¿Estudio con anticipación para las pruebas?",
+            "¿Me organizo en la semana para estudiar y hacer mis tareas?",
+            "¿Ordeno mi mochila un día antes?",
+            "¿Organizo mi uniforme para el día siguiente?",
+            "¿Aviso con anticipación los materiales que debo comprar?",
+            "¿Escribo la materia en el cuaderno que corresponde?",
+            "¿Sigo las instrucciones que me dicen los profesores?",
+            "¿En el recreo respeto el espacio de mi compañero(a)?",
+            "¿Siempre cumplo con mis deberes?",
+            "¿Siempre cumplo con mis quehaceres del hogar?",
+            "¿Cuándo algo te hace mal, te rindes fácilmente?",
+            "¿Intentas uno y otra vez hasta que me resulta?",
+            "¿Colaboras con los que haceres de tu casa?",
+            "¿Participas frecuentemente en las actividades del colegio?",
+            "¿Hago caso a mi profesor(a) cuando me llama la atención?",
+            "¿Cómo en el recreo y no en la sala?",
+            "¿Entro a clases  inmediatamente cuando toca el timbre o campana?",
+            "¿Tratas de ordenar tus cosas?",
+            "¿Anotas los apuntes cuando habla el profesor?",
+            "¿Cuándo estudias haces resumen de toda la materia?",
+            "¿Organizas los contenidos que se desarrollara en la prueba?",
+            "¿Cumples con las fechas de entrega en los trabajos?",
+            "¿Tratas de realizar las tareas por sí solo?",
+            "¿Tratas de estudiar por sí solo?",
+            "¿Cuándo tengo duda, busco resolverlo(a) por sí solo(a)?",
+        ]);
+        $individual->displayAxes(false)->dataset('Sample', 'doughnut', [$no,$a_veces,$si])->BackgroundColor(['red','yellow','green']);
+        return view('measurement.disciplinaShow',compact('medicion','usuario','preguntas','individual'));
+    }
 
 }

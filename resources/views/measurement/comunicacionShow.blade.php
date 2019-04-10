@@ -24,9 +24,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" align="center">{{$usuario->name}}</div>
-
                     <div class="card-body">
-
                         <table class="table table-hover table-striped" data-toggle="dataTable" data-form="deleteForm">
                             <thead>
                             <tr>&nbsp;</tr>
@@ -76,14 +74,9 @@
                                                 </td>
                                             @endif
                                         @endif
-
-
                                     @endif
-
-
                                 </tr>
                             @endforeach
-
                             </tbody>
                         </table>
 
@@ -92,6 +85,5 @@
             </div>
         </div>
     </div>
-
 @endsection
 {!! $individual->script() !!}
