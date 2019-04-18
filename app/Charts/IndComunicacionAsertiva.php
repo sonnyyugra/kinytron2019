@@ -14,7 +14,7 @@ class IndComunicacionAsertiva extends Chart
     public function __construct()
     {
         parent::__construct();
-        $this->labels(['NO', 'A VECES', 'SI'])
+        $this->labels(['1', '2', '3'])
             ->options([
                 'responsive' => true,
                 'animation' => [

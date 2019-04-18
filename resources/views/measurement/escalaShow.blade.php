@@ -43,27 +43,27 @@
                                     @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->isNotEmpty())
                                         @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
                                             <td>
-                                                Muy de acuerdo
+                                                1
                                             </td>
                                         @endif
                                         @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
                                             <td>
-                                                De acuerdo
+                                                2
                                             </td>
                                         @endif
                                         @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
                                             <td>
-                                                Ni de acuerdo ni en desacuerdo
+                                                3
                                             </td>
                                         @endif
                                         @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 4)
                                             <td>
-                                                En desacuerdo
+                                                4
                                             </td>
                                         @endif
                                         @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 5)
                                             <td>
-                                                Muy en desacuerdo
+                                                5
                                             </td>
                                         @endif
                                     @endif

@@ -40,39 +40,20 @@
                                         {{$pregunta}}
                                     </td>
                                     @if( $usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->isNotEmpty() )
-                                        @if( $loop->index+1 == 1 || $loop->index+1 == 2 || $loop->index+1 == 3 || $loop->index+1 == 4 || $loop->index+1 == 5 || $loop->index+1 == 6 || $loop->index+1 == 7|| $loop->index+1 == 8 || $loop->index+1 == 9 || $loop->index+1 == 10 || $loop->index+1 == 11|| $loop->index+1 == 12|| $loop->index+1 == 13|| $loop->index+1 == 15|| $loop->index+1 == 16|| $loop->index+1 == 17|| $loop->index+1 == 18|| $loop->index+1 == 19|| $loop->index+1 == 20|| $loop->index+1 == 21|| $loop->index+1 == 22|| $loop->index+1 == 23|| $loop->index+1 == 24|| $loop->index+1 == 25|| $loop->index+1 == 26|| $loop->index+1 == 27|| $loop->index+1 == 28)
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
-                                                <td bgcolor="red">
-                                                    NO
-                                                </td>
-                                            @endif
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
-                                                <td bgcolor="yellow">
-                                                    A VECES
-                                                </td>
-                                            @endif
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
-                                                <td bgcolor="green">
-                                                    SI
-                                                </td>
-                                            @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
+                                            <td>
+                                                1
+                                            </td>
                                         @endif
-                                        @if( $loop->index+1 == 14 )
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 1)
-                                                <td bgcolor="red">
-                                                    SI
-                                                </td>
-                                            @endif
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
-                                                <td bgcolor="yellow">
-                                                    A VECES
-                                                </td>
-                                            @endif
-                                            @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
-                                                <td bgcolor="green">
-                                                    NO
-                                                </td>
-                                            @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 2)
+                                            <td>
+                                                2
+                                            </td>
+                                        @endif
+                                        @if($usuario->answers->where('measurement_id',$medicion->id)->where('question_number',$loop->index+1)->first()->answer == 3)
+                                            <td>
+                                                3
+                                            </td>
                                         @endif
                                     @endif
                                 </tr>

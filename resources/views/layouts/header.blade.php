@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{ url('/') }}">
-        <img class="navbar-brand-full" src="{{ asset('img/logo.png') }}" width="89" height="25" alt="Modulr Logo">
+        <img class="navbar-brand-full" src="{{ asset('img/kinytron2.png') }}" width="55" height="35" alt="Modulr Logo">
         <img class="navbar-brand-minimized" src="{{asset('img/cuadrado.png')}}" width="30" height="30" alt="Modulr Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">

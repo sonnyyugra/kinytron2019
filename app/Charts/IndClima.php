@@ -9,7 +9,7 @@ class IndClima extends Chart
     public function __construct()
     {
         parent::__construct();
-        $this->labels(['Muy de acuerdo', 'De acuerdo', 'Ni de acuerdo ni en desacuerdo', 'En desacuerdo', 'Muy en desacuerdo'])
+        $this->labels(['1', '2', '3', '4', '5'])
             ->options([
                 'responsive' => true,
                 'animation' => [

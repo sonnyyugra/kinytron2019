@@ -482,27 +482,14 @@ class MeasurementController extends Controller
         $medicion = Measurement::find($measurement);
         $usuario = \Kinytron\User::find($user);
         foreach ($usuario->answers->where('measurement_id',$measurement) as $answer){
-            if($answer->question_number == 1 || $answer->question_number == 2 || $answer->question_number == 3 || $answer->question_number == 4 || $answer->question_number == 5 || $answer->question_number == 6 || $answer->question_number == 8 || $answer->question_number == 9 || $answer->question_number == 10 || $answer->question_number == 11|| $answer->question_number == 12|| $answer->question_number == 13|| $answer->question_number == 14|| $answer->question_number == 16|| $answer->question_number == 19|| $answer->question_number == 20|| $answer->question_number == 21|| $answer->question_number == 22|| $answer->question_number == 23|| $answer->question_number == 24|| $answer->question_number == 26|| $answer->question_number == 27|| $answer->question_number == 28) {
-                if ($answer->answer == 1) {
-                    $no++;
-                }
-                if ($answer->answer == 2) {
-                    $a_veces++;
-                }
-                if ($answer->answer == 3) {
-                    $si++;
-                }
+            if ($answer->answer == 1) {
+                $no++;
             }
-            if( $answer->question_number == 7 || $answer->question_number == 15|| $answer->question_number == 17|| $answer->question_number == 18|| $answer->question_number == 25){
-                if ($answer->answer == 1) {
-                    $si++;
-                }
-                if ($answer->answer == 2) {
-                    $a_veces++;
-                }
-                if ($answer->answer == 3) {
-                    $no++;
-                }
+            if ($answer->answer == 2) {
+                $a_veces++;
+            }
+            if ($answer->answer == 3) {
+                $si++;
             }
         }
         $preguntas = collect([

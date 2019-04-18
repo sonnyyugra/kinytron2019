@@ -38,7 +38,7 @@
 
 <header class="header">
     <div class="header__content header__content--fix-width">
-        <div class="header__logo-title">KINYTRON</div>
+        <div class="header__logo-title"><span>KINYTRON</span></div>
         <nav class="header__menu">
             <ul>
                 <li><a class="selected header-link" href="#intro">INICIO</a></li>
@@ -59,8 +59,8 @@
     <div class="section__content section__content--fix-width section__content--intro">
         <div class="intro">
             <div class="intro__content">
-                <div class="intro__title"><span>Aumenta</span> el rendimiento de tus alumnos</div>
-                <div class="intro__subtitle">Potencia tu convivencia escolar con videojuegos educativos y talleres lúdicos</div>
+                <div class="intro__title"><span>Aumenta el rendimiento de tus alumnos</span></div>
+                <div class="intro__subtitle">Potencia tu convivencia escolar con videojuegos educativos y talleres lúdicos </div>
                 <div class="intro__description">Alineados con los indicadores de desarrollo personal y social de la <span>Agencia de la calidad de la educación</span> </div>
                 <div class="intro__buttons intro__buttons--centered">
                     <!-- <a href="#" class="btn btn--blue-bg modal-toggle" data-openpopup="animation">MÁS</a>  -->
@@ -69,9 +69,9 @@
             </div>
         </div>
     </div>
-    <svg class="svg-intro-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <!-- <svg class="svg-intro-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon fill="#ecf9f5" points="0,100 100,0 100,100"/>
-    </svg>
+    </svg> -->
 </section>
 
 
@@ -151,7 +151,7 @@
 
             </div>
             <div class="grid__item grid__item--x3" >
-                <div class="grid__image grid__image--right"><img src="landing/images/kinytron.png" alt="" title="" align="center"/></div>
+                <div class="grid__image grid__image--right"><img width="422" height="472" src="landing/images/kinytron2.png" alt="" title="" align="center"/></div>
             </div>
         </div>
     </div>
