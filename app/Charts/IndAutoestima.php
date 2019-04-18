@@ -6,15 +6,10 @@ use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 
 class IndAutoestima extends Chart
 {
-    /**
-     * Initializes the chart.
-     *
-     * @return void
-     */
     public function __construct()
     {
         parent::__construct();
-        $this->labels(['De acuerdo', 'No se', 'Estoy en desacuerdo'])
+        $this->labels(['3', '2', '1'])
             ->options([
                 'responsive' => true,
                 'animation' => [
