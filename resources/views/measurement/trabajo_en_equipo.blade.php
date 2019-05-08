@@ -13,7 +13,7 @@
         <div class="row" align="center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header" align="center">Gráfico</div>
+                    <div class="card-header" align="center">Gráfico de {{ $measurement->exam->name }} del curso {{ $measurement->course->getFullNameAttribute() }}</div>
 
                     <div class="card-body">
                         {!! $chart_TrabajoEnEquipo->container() !!}
