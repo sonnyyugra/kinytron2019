@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('medals')->insert([
             'name' => 'Kinytronizate',
-            'description' => 'Conseguiste todas las Kinymedallas no existe descripcion de medalla'
+            'description' => 'Conseguiste todas las Kinymedallas'
         ]);
         //items
         DB::table('items')->insert([
@@ -159,8 +159,5 @@ class DatabaseSeeder extends Seeder
             'name' => 'Botella llena',
             'description' => 'Una botella de plastico llena de agua'
         ]);
-
-
-
     }
 }

@@ -595,7 +595,7 @@
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
                                         @endif
-                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario</h5></p>
+                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario - Trabajo en Equipo</h5></p>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
@@ -980,7 +980,7 @@
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
                                         @endif
-                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario</h5></p>
+                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario - Comunicación Asertiva</h5></p>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
@@ -1376,7 +1376,7 @@
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
                                         @endif
-                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario</h5></p>
+                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario - Empatía</h5></p>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
@@ -1760,7 +1760,7 @@
                                         @else
                                             <span class="badge badge-pill badge-success pull-right">Evaluado</span>
                                         @endif
-                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario</h5></p>
+                                        <p><h5 class="text-muted"><i class="fa fa-headset"></i> Cuestionario - Disciplina</h5></p>
                                     </div>
                                     <div class="timeline-body">
                                         <p>

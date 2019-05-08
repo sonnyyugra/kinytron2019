@@ -13,9 +13,21 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header" align="center">Gráfico Individual de {{$usuario->name}}</div>
+                    <div class="card-header" align="center">Gráfico Individual de {{$usuario->name}} - Escala de Clima Escolar - {{$usuario->course->getFullNameAttribute()}} - {{$medicion->created_at->format('d/m/Y')}}</div>
                     <div class="card-body">
-                        {!! $individual->container() !!}
+                        <div>
+                            <p align="center" class="alert alert-dark">
+                                1: Muy de acuerdo  <br>
+                                2: De acuerdo <br>
+                                3: Ni de acuerdo ni en desacuerdo <br>
+                                4: En desacuerdo<br>
+                                5: Muy en desacuerdo
+                            </p>
+                        </div>
+                        <div>
+                            {!! $individual->container() !!}
+
+                        </div>
                     </div>
                 </div>
             </div>

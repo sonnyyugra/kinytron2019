@@ -11,7 +11,26 @@
 @section('content')
     <div class="py-4">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" align="center">Pautas</div>
+                    <div class="card-body">
+                        <a href="{{ route('measurement.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nueva Medición</a>
+                        <a href="{{asset('pautas/autoestimacion.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Autoestimación</a>
+                        <a href="{{asset('pautas/clima_escolar.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Clima Escolar</a>
+                        <a href="{{asset('pautas/trabajo_equipo.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Trabajo en Equipo</a>
+                        <a href="{{asset('pautas/empatia.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Empatía</a>
+                        <a href="{{asset('pautas/comunicacion_asertiva.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Comunicación Asertiva</a>
+                        <a href="{{asset('pautas/disciplina.pdf')}}" target="_blank" class="btn bg-yellow"><i class="fa fa-file-pdf"></i> Disciplina</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" align="center">Mediciones</div>
                     @if (Session::has('message'))
@@ -95,14 +114,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-header">Opciones</div>
-                    <div class="card-body">
-                        <a href="{{ route('measurement.create') }}" class="btn btn-primary">Nueva Medición</a>
                     </div>
                 </div>
             </div>
