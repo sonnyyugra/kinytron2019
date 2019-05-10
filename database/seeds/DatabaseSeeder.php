@@ -30,22 +30,22 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call(UserTableSeeder::class);
         DB::table('exams')->insert([
-            'name' => 'ESCALA DE CLIMA ESCOLAR',
+            'name' => 'TEST ESCALA DE CLIMA ESCOLAR',
         ]);
         DB::table('exams')->insert([
-            'name' => 'AUTOESTIMA',
+            'name' => 'TEST AUTOESTIMA',
         ]);
         DB::table('exams')->insert([
-            'name' => 'TRABAJO EN EQUIPO',
+            'name' => 'CUESTIONARIO TRABAJO EN EQUIPO',
         ]);
         DB::table('exams')->insert([
-            'name' => 'COMUNICACION ASERTIVA',
+            'name' => 'CUESTIONARIO COMUNICACION ASERTIVA',
         ]);
         DB::table('exams')->insert([
-            'name' => 'EMPATIA',
+            'name' => 'CUESTIONARIO EMPATIA',
         ]);
         DB::table('exams')->insert([
-            'name' => 'DISCIPLINA',
+            'name' => 'CUESTIONARIO DISCIPLINA',
         ]);
         DB::table('measurements')->insert([
             'user_id' => 2,

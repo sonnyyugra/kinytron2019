@@ -24,9 +24,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-
-    }
+    { }
 
     /**
      * Show the form for creating a new resource.
@@ -45,9 +43,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-
-    }
+    { }
 
     /**
      * Display the specified resource.
@@ -69,7 +65,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('user.edit',compact('user'));
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -83,16 +79,14 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:35',
-            'lastname' => 'required|max:35',
         ]);
         $user = User::find($id);
         $user->name = $request->name;
-        $user->lastname = $request->lastname;
         $user->save();
         Session::flash('message', 'editar');
         $course = User::find($id)->course;
-        $users = Course::find($course->id)->users->where('user_type',3);
-        return view('user.list',compact('course','users'));
+        $users = Course::find($course->id)->users->where('user_type', 3);
+        return view('user.list', compact('course', 'users'));
     }
 
     /**
@@ -106,26 +100,28 @@ class UserController extends Controller
         $user = User::find($id);
         $course = User::find($id)->course;
         $user->delete();
-        $users = Course::find($course->id)->users->where('user_type',3);
-        Session::flash('message','eliminar');
-        return view('user.list',compact('course','users'));
+        $users = Course::find($course->id)->users->where('user_type', 3);
+        Session::flash('message', 'eliminar');
+        return view('user.list', compact('course', 'users'));
     }
-    public function users(){
-
-    }
-    public function changeMod0(Request $request){
+    public function users()
+    { }
+    public function changeMod0(Request $request)
+    {
         $user = User::find($request->user_id);
         $user->mod0 = $request->mod0;
-        if($user->save()){
+        if ($user->save()) {
             return new UserResource($user);
         }
     }
-    public function showcourse(Request $request){
+    public function showcourse(Request $request)
+    {
         $course = Course::find($request->id);
-        $users = Course::find($request->id)->users->where('user_type',3);
-        return view('user.list',compact('users','course'));
+        $users = Course::find($request->id)->users->where('user_type', 3);
+        return view('user.list', compact('users', 'course'));
     }
-    public function add(Request $request){
+    public function add(Request $request)
+    {
         $course = Course::find($request->course_id);
 
         $this->validate($request, [
@@ -135,7 +131,7 @@ class UserController extends Controller
         ]);
 
         $user = new User([
-            'name' => $request->get('name')." ".$request->get('lastname'),
+            'name' => $request->get('name') . " " . $request->get('lastname'),
             'college_id' => $request->get('college_id'),
             'course_id' => $request->get('course_id'),
             'user_type' => 3,
@@ -143,17 +139,20 @@ class UserController extends Controller
             'email' => $request->get('email'),
         ]);
         $user->save();
-        $users = Course::find($request->course_id)->users->where('user_type',3);
+        $users = Course::find($request->course_id)->users->where('user_type', 3);
 
         Session::flash('message', 'agregar');
         return redirect()->action(
-            'UserController@showcourse', ['id' => $request->course_id]
+            'UserController@showcourse',
+            ['id' => $request->course_id]
         );
     }
-    public function addadm(){
+    public function addadm()
+    {
         return view('user.addadm');
     }
-    public function storeadm(Request $request){
+    public function storeadm(Request $request)
+    {
         $this->validate($request, [
             'name' => 'required|max:20',
             'lastname' => 'required|max:20',
@@ -172,11 +171,13 @@ class UserController extends Controller
         Session::flash('message', 'agregar');
         return Redirect::to('showadm');
     }
-    public function addtutor(){
+    public function addtutor()
+    {
         $colleges = College::all();
-        return view('user.addtutor',compact('colleges'));
+        return view('user.addtutor', compact('colleges'));
     }
-    public function storetutor(Request $request){
+    public function storetutor(Request $request)
+    {
         $this->validate($request, [
             'name' => 'required|max:20',
             'lastname' => 'required|max:20',
@@ -198,38 +199,44 @@ class UserController extends Controller
         Session::flash('message', 'agregar');
         return Redirect::to('showtutor');
     }
-    public function showadm(){
-        $users = User::all()->where('user_type',10);
-        return view('user.showadm',compact('users'));
+    public function showadm()
+    {
+        $users = User::all()->where('user_type', 10);
+        return view('user.showadm', compact('users'));
     }
-    public function showtutor(){
-        $colleges = College::all()->pluck('name','id');
-        $users = User::all()->where('user_type',5);
-        return view('user.showtutor',compact('users','colleges'));
+    public function showtutor()
+    {
+        $colleges = College::all()->pluck('name', 'id');
+        $users = User::all()->where('user_type', 5);
+        return view('user.showtutor', compact('users', 'colleges'));
     }
-    public function deleteadm(User $user){
+    public function deleteadm(User $user)
+    {
         $user->delete();
-        Session::flash('message','eliminar');
+        Session::flash('message', 'eliminar');
         return Redirect::to('showadm');
     }
-    public function deletetutor(User $user){
+    public function deletetutor(User $user)
+    {
         $user->delete();
-        Session::flash('message','eliminar');
+        Session::flash('message', 'eliminar');
         return Redirect::to('showtutor');
     }
-    public function edittutor($id){
+    public function edittutor($id)
+    {
         $user = User::find($id);
-        $colleges = College::all()->pluck('name','id');;
-        return view('user.edittutor',compact('user','colleges'));
+        $colleges = College::all()->pluck('name', 'id');;
+        return view('user.edittutor', compact('user', 'colleges'));
     }
-    public function editadm($id){
+    public function editadm($id)
+    {
         $user = User::find($id);
-        return view('user.editadm',compact('user'));
+        return view('user.editadm', compact('user'));
     }
-    public function updateadm(Request $request){
-
-    }
-    public function updatetutor(User $user,Request $request){
+    public function updateadm(Request $request)
+    { }
+    public function updatetutor(User $user, Request $request)
+    {
         $user->name = $request->get('name');
         $user->lastname = $request->get('lastname');
         $user->college_id = $request->get('college_id');
