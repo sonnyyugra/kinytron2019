@@ -61,6 +61,8 @@
                                         <td bgcolor="yellow">{!! $total !!}</td>
                                     @elseif($total >=1 && $total <= 1.6)
                                         <td bgcolor="green">{!! $total !!}</td>
+                                    @else
+                                        <td bgcolor="grey">No hay registros</td>
                                     @endif
                                 </tr>
                             @endforeach

@@ -54,6 +54,8 @@
                                         <td bgcolor="blue">{!! $total !!}</td>
                                     @elseif($total >=55 && $total <= 60)
                                         <td bgcolor="green">{!! $total !!}</td>
+                                    @else
+                                        <td bgcolor="grey">No hay registros</td>
                                     @endif
                                 </tr>
                             @endforeach
