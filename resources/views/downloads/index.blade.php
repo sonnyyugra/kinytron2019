@@ -16,19 +16,19 @@
                     <div class="card-header" align="center">VIDEOJUEGO MODULOS KINYTRON </div>
 
                     <div class="card-body" align="center">
-                        <a href="{{asset('/videojuegos/historia/win32.7z')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/historia/Modulos Kinytron_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/historia/win64.7z')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/historia/Modulos Kinytron_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/historia/linux32.7z')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/historia/linux64.7z')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/historia/macosx.7z')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -42,20 +42,20 @@
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/tests/autoestima/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/tests/autoestima/Test Autoestima_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/tests/autoestima/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/tests/autoestima/Test Autoestima_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/tests/autoestima/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/tests/autoestima/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/tests/autoestima/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -65,24 +65,24 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header" align="center">VIDEOJUEGO CLIMA ESCOLAR</div>
+                    <div class="card-header" align="center">VIDEOJUEGO TEST CLIMA ESCOLAR</div>
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/tests/clima_escolar/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/tests/clima_escolar/Test Clima Escolar_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/tests/clima_escolar/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/tests/clima_escolar/Test Clima Escolar_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/tests/clima_escolar/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/tests/clima_escolar/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/tests/clima_escolar/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -96,20 +96,20 @@
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/Cuestionario Trabajo en Equipo_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/Cuestionario Trabajo en Equipo_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/trabajo_en_equipo/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -123,20 +123,20 @@
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/Cuestionario Comunicacion Asertiva_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/Cuestionario Comunicacion Asertiva_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/comunicacion_asertiva/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -150,20 +150,20 @@
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/cuestionarios/empatia/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/empatia/Cuestionario Empatia_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/empatia/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/empatia/Cuestionario Empatia_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/empatia/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/empatia/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/empatia/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
@@ -173,24 +173,24 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header" align="center">VIDEOJUEGO CUESTIONARIO EMPATÍA</div>
+                    <div class="card-header" align="center">VIDEOJUEGO CUESTIONARIO DISCIPLINA</div>
 
                     <div class="card-body" align="center">
 
-                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/win32.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/Cuestionario Disciplina_Win_x86.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i>
                             Windows x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/win64.zip')}}" class="btn btn-primary">
+                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/Cuestionario Disciplina_Win_x64.zip')}}" class="btn btn-primary">
                             <i class="fab fa-windows"></i> Windows x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/linux32.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x32
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/linux64.zip')}}" class="btn btn-warning">
+                        <a href="#" class="btn btn-warning">
                             <i class="fab fa-linux"></i> Linux x64
                         </a>
-                        <a href="{{asset('/videojuegos/cuestionarios/disciplina/macosx.zip')}}" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary">
                             <i class="fab fa-apple"></i> Mac OsX
                         </a>
                     </div>
