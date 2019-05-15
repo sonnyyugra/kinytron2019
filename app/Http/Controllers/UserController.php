@@ -78,7 +78,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required|max:35',
+            'name' => 'required|max:40',
         ]);
         $user = User::find($id);
         $user->name = $request->name;
@@ -125,8 +125,8 @@ class UserController extends Controller
         $course = Course::find($request->course_id);
 
         $this->validate($request, [
-            'name' => 'required|max:20',
-            'lastname' => 'required|max:20',
+            'name' => 'required|max:40',
+            'lastname' => 'required|max:40',
             'email' => 'required|unique:users',
         ]);
 
@@ -154,8 +154,8 @@ class UserController extends Controller
     public function storeadm(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:20',
-            'lastname' => 'required|max:20',
+            'name' => 'required|max:40',
+            'lastname' => 'required|max:40',
             'email' => 'required|unique:users',
             'password' => 'required'
         ]);
@@ -179,8 +179,8 @@ class UserController extends Controller
     public function storetutor(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:20',
-            'lastname' => 'required|max:20',
+            'name' => 'required|max:40',
+            'lastname' => 'required|max:40',
             'email' => 'required|unique:users',
             'password' => 'required',
             'college_id' => 'required',
