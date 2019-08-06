@@ -73,7 +73,7 @@
                     <a class="nav-link" href="{{ url('createsug') }}">
                         <i class="nav-icon icon-envelope-letter"></i> Enviar Sugerencia
                     </a>
-                </li>
+                </li>                
             @endif
         </ul>
     </nav>

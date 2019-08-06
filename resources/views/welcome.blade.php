@@ -45,7 +45,17 @@
                 <li><a href="#about" class="header-link">SOLUCIÓN</a></li>
                 <li><a href="#testimonials" class="header-link">REPUTACIÓN</a></li>
                 <li><a href="#contact" class="header-link">CONTACTO</a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://blog.kinytron.com/" class="header-link">BLOG</a></li>
+                <li class="menu-item-has-children "><span class="submenu-button"></span><a href="#features" class="header-link">VIDEOJUEGOS</a>
+                    <ul class="sub-menu">
+                    <li><a target="_blank" rel="noopener noreferrer" href="/test_autoestima" class="header-link">TEST AUTOESTIMA</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/test_clima_escolar" class="header-link">TEST CLIMA ESCOLAR</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/historia_kinytron" class="header-link">HISTORIA DE KINYTRON</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/cuest_trabajo_equipo" class="header-link">CUEST. TRAB. EQUIPO</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/cuest_com_asertiva" class="header-link">CUEST. COM. ASERTIVA</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/cuest_empatia" class="header-link">CUEST. EMPATÍA</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="/cuest_disciplina" class="header-link">CUEST. DISCIPLINA</a></li>
+                    </ul>
+                </li>
                 <li class="header__btn header__btn--login"  ><a href="/login">ENTRAR</a></li>
 
                 <!-- <li class="header__btn header__btn--signup modal-toggle" data-openpopup="signuplogin" data-popup="signup"><a href="#">DEMO GRATIS</a></li>  -->
