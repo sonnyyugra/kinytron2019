@@ -1,0 +1,13 @@
+{
+"companyName": "Kinytron",
+"productName": "Cuestionario Trabajo de Equipo",
+"dataUrl": "Kinytron_Trabajo_en_equipo.data.unityweb",
+"wasmCodeUrl": "Kinytron_Trabajo_en_equipo.wasm.code.unityweb",
+"wasmFrameworkUrl": "Kinytron_Trabajo_en_equipo.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -1,0 +1,13 @@
+{
+"companyName": "Kinytron Company",
+"productName": "Modulos Kinytron",
+"dataUrl": "Kinytron_Modulos.data.unityweb",
+"asmCodeUrl": "Kinytron_Modulos.asm.code.unityweb",
+"asmMemoryUrl": "Kinytron_Modulos.asm.memory.unityweb",
+"asmFrameworkUrl": "Kinytron_Modulos.asm.framework.unityweb",
+"TOTAL_MEMORY": 629145600,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

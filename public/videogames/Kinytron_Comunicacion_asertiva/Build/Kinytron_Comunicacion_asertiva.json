@@ -1,0 +1,13 @@
+{
+"companyName": "Kinytron",
+"productName": "Cuestionario Comunicacion Asertiva",
+"dataUrl": "Kinytron_Comunicacion_asertiva.data.unityweb",
+"wasmCodeUrl": "Kinytron_Comunicacion_asertiva.wasm.code.unityweb",
+"wasmFrameworkUrl": "Kinytron_Comunicacion_asertiva.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
