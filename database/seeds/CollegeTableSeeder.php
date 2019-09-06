@@ -11,6 +11,6 @@ class CollegeTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\Kinytron\College::class, 2)->create();
+        factory(\Kinytron\College::class, 1)->create();
     }
 }

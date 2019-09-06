@@ -20,7 +20,7 @@ $factory->define(Kinytron\User::class, function (Faker $faker) {
         'password' => bcrypt('123'), // secret
         'remember_token' => str_random(10),
         'user_type' => 3, // 3 = alumno, 5 = tutor, 10 = admin
-        'course_id' => 1,
-        'college_id' => 1,
+        'course_id' => 35,
+        'college_id' => 10,
     ];
 });
