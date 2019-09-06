@@ -9,11 +9,11 @@ $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncr
     $autoIncrement->next();
     //CLIMA ESCOLAR
 
-    // return [
-    //     'answer' => $faker->numberBetween(1, 5),
-    //     'question_number' => $autoIncrement->current(),
-    //     'measurement_id' => 11,
-    // ];
+    return [
+        'answer' => $faker->numberBetween(1, 5),
+        'question_number' => $autoIncrement->current(),
+        'measurement_id' => 30,
+    ];
 
     // //AUTOESTIMA
 
@@ -25,23 +25,23 @@ $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncr
 
     //TRABAJO EN EQUIPO
 
-    return [
-        'answer' => $faker->numberBetween(1, 3),
-        'question_number' => $autoIncrement->current(),
-        'measurement_id' => 35,
-    ];
+    // return [
+    //     'answer' => $faker->numberBetween(1, 3),
+    //     'question_number' => $autoIncrement->current(),
+    //     'measurement_id' => 35,
+    // ];
 });
 
 function autoIncrement()
 {
     // //CLIMA ESCOLAR
 
-    // for ($i = 0; $i < 19; $i++) {
-    //     yield $i;
-    //     if ($i == 18) {
-    //         $i = 0;
-    //     }
-    // }
+    for ($i = 0; $i < 19; $i++) {
+        yield $i;
+        if ($i == 18) {
+            $i = 0;
+        }
+    }
 
 
     // //AUTOESTIMA
@@ -55,10 +55,10 @@ function autoIncrement()
 
     //TRABAJO EN EQUIPO
 
-    for ($i = 0; $i < 8; $i++) {
-        yield $i;
-        if ($i == 7) {
-            $i = 0;
-        }
-    }
+    // for ($i = 0; $i < 8; $i++) {
+    //     yield $i;
+    //     if ($i == 7) {
+    //         $i = 0;
+    //     }
+    // }
 }
