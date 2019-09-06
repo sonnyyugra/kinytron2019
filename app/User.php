@@ -12,14 +12,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
-    use HasApiTokens,Notifiable;
+    use HasApiTokens, Notifiable;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','user_type','college_id','course_id'
+        'name', 'email', 'password', 'user_type', 'college_id', 'course_id'
     ];
 
     /**
@@ -35,19 +35,24 @@ class User extends Authenticatable
         return $this->belongsTo(College::class);
     }
 
-    public function course(){
+    public function course()
+    {
         return $this->belongsTo(Course::class);
     }
-    public function evaluations(){
+    public function evaluations()
+    {
         return $this->hasMany(Evaluation::class);
     }
-    public function answers(){
+    public function answers()
+    {
         return $this->hasMany(Answer::class);
     }
-    public function items(){
+    public function items()
+    {
         return $this->belongsToMany(Item::class);
     }
-    public function medals(){
+    public function medals()
+    {
         return $this->belongsToMany(Medal::class);
     }
 }

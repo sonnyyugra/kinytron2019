@@ -11,7 +11,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\Kinytron\User::class, 30)->create();
-
+        factory(\Kinytron\User::class, 15)->create();
     }
 }
