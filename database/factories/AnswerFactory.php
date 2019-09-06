@@ -28,7 +28,7 @@ $factory->define(\Kinytron\Answer::class, function (Faker $faker) use ($autoIncr
     return [
         'answer' => $faker->numberBetween(1, 3),
         'question_number' => $autoIncrement->current(),
-        'measurement_id' => 33,
+        'measurement_id' => 34,
     ];
 });
 
