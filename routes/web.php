@@ -75,6 +75,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('measurement/empatia/{measurement}/{user}', 'MeasurementController@empatia')->name('measurement.empatia');
     Route::get('measurement/comunicacion/{measurement}/{user}', 'MeasurementController@comunicacion')->name('measurement.comunicacion');
     Route::get('measurement/disciplina/{measurement}/{user}', 'MeasurementController@disciplina')->name('measurement.disciplina');
+    Route::get('intro', function () {
+        return view('intro.index');        
+    });
+    Route::get('tarea', function () {
+        return view('intro.subir');        
+    });
 });
 Route::get('demo', function () {
     return view('auth.register');

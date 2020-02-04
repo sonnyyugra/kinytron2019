@@ -15,12 +15,13 @@ use Faker\Generator as Faker;
 
 $factory->define(Kinytron\User::class, function (Faker $faker) {
     return [
-        'name' => $faker->firstNameMale,
-        'email' => $faker->unique()->email,
+        'name' => $faker->firstNameMale." ".$faker->lastname,
         'password' => bcrypt('123'), // secret
         'remember_token' => str_random(10),
         'user_type' => 3, // 3 = alumno, 5 = tutor, 10 = admin
-        'course_id' => 35,
-        'college_id' => 10,
+        'course_id' => 37,
+        'college_id' => 13,
+        // 'course_id' => 1,
+        // 'college_id' => 1,
     ];
 });

@@ -33,7 +33,6 @@
 
 </div>
 
-<script src="{{ asset('js/app.js') }}" ></script>
 <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken' => csrf_token(),
@@ -102,6 +101,7 @@
 <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 
+<script src="{{ asset('js/app.js') }}" ></script>
 
 </body>
 </html>
