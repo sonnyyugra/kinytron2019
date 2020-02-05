@@ -46,7 +46,9 @@ class HomeController extends Controller
             return redirect('/college');
         }
         if(Auth::user()->user_type == 3){
-            return redirect('/intro');
+            // return redirect('/intro');
+            Auth::logout();
+            return redirect('/login');
         }
     }
 }
