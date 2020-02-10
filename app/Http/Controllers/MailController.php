@@ -21,7 +21,7 @@ class MailController extends Controller
             'email' => 'required|email'
         ]);
 
-        Mail::to('contacto@kinytron.com')->send(new Contacto($request));
+        Mail::to('contacto@yucof.com')->send(new Contacto($request));
         Mail::to($request->email)->send(new Welcome($request));
         Session::flash('msg','Gracias, te contactaremos a la brevedad!');
         return redirect('/demo');

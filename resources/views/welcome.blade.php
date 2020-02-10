@@ -45,6 +45,7 @@
                 <li><a href="#about" class="header-link">SOLUCIÓN</a></li>
                 <li><a href="#testimonials" class="header-link">REPUTACIÓN</a></li>
                 <li><a href="#contact" class="header-link">CONTACTO</a></li>
+                <li><a target="_blank" href="{{asset('introduccion/ilce.pdf')}}" class="header-link">INTRODUCCIÓN</a></li>
                 <li class="menu-item-has-children "><span class="submenu-button"></span><a href="#features" class="header-link">VIDEOJUEGOS</a>
                     <ul class="sub-menu">
                     <li><a target="_blank" rel="noopener noreferrer" href="/test_autoestima" class="header-link">TEST AUTOESTIMA</a></li>
@@ -69,7 +70,7 @@
     <div class="section__content section__content--fix-width section__content--intro">
         <div class="intro">
             <div class="intro__content">
-                <div class="intro__title"><span>Aumenta el rendimiento de tus alumnos</span></div>
+                <div class="intro__title"><span>Videojuegos y talleres grupales anti-bullying para colegios</span></div>
                 <div class="intro__subtitle">Potencia tu convivencia escolar con videojuegos educativos y talleres lúdicos </div>
                 <div class="intro__description">Alineados con los indicadores de desarrollo personal y social de la <span>Agencia de la calidad de la educación</span> </div>
                 <div class="intro__buttons intro__buttons--centered">
@@ -141,7 +142,7 @@
 
             <div class="grid__item grid__item--x2">
                 <h3 class="grid__title">
-                    Metodología <span>G-Learning</span> alineada con los <span>IDPS</span> junto a los objetivos de aprendizaje que dicta el <span>MINEDUC </span>
+                    Metodología <span>G-Learning</span> alineada con los <span>IDPS</span>(Indicadores de desarrollo personal y social) junto a los objetivos de aprendizaje que dicta el <span>MINEDUC </span> (Ministerio de educación de Chile)
 
                 </h3>
 
@@ -429,21 +430,21 @@
                 <div class="grid__icon"><img src="landing/images/icons/icons-64-green/support-64.png" alt="" title=""/></div>
                 <h3 class="grid__title">Ayuda & Soporte</h3>
                 <p class="grid__text">Su problema es nuestra prioridad. Nuestro equipo de soporte esta aquí para ayudarte y darte la seguridad de que estamos operativos.</p>
-                <a href="#" class="grid__more">sonnyyugra@kinytron.com</a>
+                <a href="#" class="grid__more">contacto@yucof.com</a>
             </div>
             <div class="grid__item grid__item--padding">
                 <div class="grid__icon"><img src="landing/images/icons/icons-64-green/globe-64.png" alt="" title=""/></div>
                 <h3 class="grid__title">Recursos</h3>
                 <p class="grid__text">Publicaciones y recursos de nuestro equipo. Obten nuestra información pública sobre nuestra compañia y ve cómo estamos trabajando.
                 </p>
-                <a href="#" class="grid__more">contacto@kinytron.com</a>
+                <a href="#" class="grid__more">contacto@yucof.com</a>
             </div>
             <div class="grid__item grid__item--padding">
                 <div class="grid__icon"><img src="landing/images/icons/icons-64-green/wallet-64.png" alt="" title=""/></div>
                 <h3 class="grid__title">Ventas</h3>
                 <p class="grid__text">Tienes una pregunta sobre nuestro servicio? Nos encantaría mostrarte las funcionalidades y nuestra metodogía de trabajo.
                 </p>
-                <a href="#" class="grid__more">acofre@kinytron.com</a>
+                <a href="#" class="grid__more">contacto@yucof.com</a>
             </div>
         </div>
         <div class="clear"></div>
@@ -507,7 +508,7 @@
 
             <div class="grid__item grid__item--x1">
                 <h3 class="grid__title grid__title--footer-logo">KINYTRON</h3>
-                <p class="grid__text grid__text--copyright">Copyright &copy; 2019 YUCOF.  <br />All Rights Reserved. </p>
+                <p class="grid__text grid__text--copyright">Copyright &copy; 2020 YUCOF.  <br />All Rights Reserved. </p>
                 <ul class="grid__list grid__list--sicons">
                     <li><a href="#"><img src="landing/images/social/black/twitter.png" alt="" title=""/></a></li>
                     <li><a href="https://www.facebook.com/KINYTRON/"><img src="landing/images/social/black/facebook.png" alt="" title=""/></a></li>
